@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2154041880388074041}
   - component: {fileID: 252709187803966362}
+  - component: {fileID: 169476107625456311}
   m_Layer: 3
   m_Name: Borde Izq
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &169476107625456311
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805764188674074693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.21130562, y: 0.15137684, z: 0.2}
+  m_Center: {x: 0.005194187, y: -0.0047942996, z: 0}

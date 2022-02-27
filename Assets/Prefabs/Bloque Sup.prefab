@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3100857485386754558}
   - component: {fileID: 6500679596907472377}
+  - component: {fileID: 3166009832858305069}
   m_Layer: 3
   m_Name: Bloque Sup
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &3166009832858305069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6620106092210206358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16975546, y: 0.23927224, z: 0.2}
+  m_Center: {x: 0.005992651, y: -0.008789565, z: 0}

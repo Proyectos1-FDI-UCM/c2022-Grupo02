@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9144850755078992575}
   - component: {fileID: 2278921253751035800}
+  - component: {fileID: -8467678736277044253}
   m_Layer: 3
   m_Name: Border Der
   m_TagString: Untagged
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &-8467678736277044253
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928927600398811786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.28002405, y: 0.15936744, z: 0.2}
+  m_Center: {x: 0.00039935112, y: 0, z: 0}
