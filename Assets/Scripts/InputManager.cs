@@ -28,6 +28,7 @@ public class InputManager : MonoBehaviour
         _myCharacterController = GetComponent<CharacterController>();
         _myTransform = GetComponent<Transform>();
         _jumpController = GetComponent<JumpController>();
+        dir = +1;
     }
 
     void Update()
@@ -63,6 +64,7 @@ public class InputManager : MonoBehaviour
         if(Time.time > canfire)
         {
             GameObject newshoot =  Instantiate(myShot, shoopos.position, Quaternion.identity); //disparar
+            Debug.Log(dir);
             newshoot.GetComponent<Rigidbody2D>(/*Animaciones de la bala*/).velocity = new Vector2 (ShotSpeed * dir *Time.fixedDeltaTime, 0f);
             canfire = Time.time +firerate;//indica la cadencia del tiro
         }

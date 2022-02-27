@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9ec48e398b96640a2c6153b00b272d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followSpeed: 1
+  followSpeed: 3.5
   yPos: 0
   _targetTransform: {fileID: 1531403808}
 --- !u!20 &519420031
