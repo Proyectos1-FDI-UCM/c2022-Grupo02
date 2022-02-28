@@ -9,9 +9,11 @@ public class JumpController : MonoBehaviour
     float _gravity = 9.8f;
     [SerializeField]
     float _jumpSpeed = 0f;
-    [SerializeField]
-    float _maxGravity = 9.8f;
-    Vector2 velocity;
+    Vector3 velocity;
+    #endregion
+
+    #region properties
+    float _gravitySpeed;
     #endregion
 
     #region referneces
@@ -28,14 +30,20 @@ public class JumpController : MonoBehaviour
         }
     }
 
-    private void SetGravity()
+    public Vector3 SetGravity()
     {
-        if (velocity.y >= - _maxGravity)
+        if (!_myCharacterController.isGrounded)
         {
-            velocity.y -= _gravity * Time.deltaTime;
+            _gravitySpeed -= _gravity * Time.deltaTime;
+            velocity.y -= _gravitySpeed;
             Debug.Log(velocity.y);
         }
-        _myCharacterController.Move(velocity * Time.deltaTime);
+        else
+        {
+            _gravitySpeed = 0;
+            Debug.Log("estoy en el suelo");
+        }
+        return velocity;
     }
     #endregion
 
@@ -45,13 +53,13 @@ public class JumpController : MonoBehaviour
         _myCharacterController = GetComponent<CharacterController>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        SetGravity();
-        if (_myCharacterController.isGrounded) {
+        if (_myCharacterController.isGrounded)
+        {
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);
         }
     }
 }
+
 

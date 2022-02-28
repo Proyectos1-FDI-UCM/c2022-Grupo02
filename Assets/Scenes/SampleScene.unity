@@ -972,9 +972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde1f602e8ab8846a6d18ffa6133c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravity: 100
-  _jumpSpeed: 35
-  _maxGravity: 20
+  _gravity: -9
+  _jumpSpeed: 50
 --- !u!114 &1531403806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1071,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 0.33
   m_Radius: 0.1
-  m_SlopeLimit: 45
+  m_SlopeLimit: 5
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001

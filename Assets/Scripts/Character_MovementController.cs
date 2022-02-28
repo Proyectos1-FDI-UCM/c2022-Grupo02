@@ -15,10 +15,12 @@ public class Character_MovementController : MonoBehaviour
 
     #region references
     private CharacterController _myCharacterController;
+    private JumpController _myJumpController;
     #endregion
 
     #region properties
     private Vector3 _movementDirection;
+    private Vector3 _jumpDirection;
     #endregion
 
     #region methods
@@ -32,6 +34,8 @@ public class Character_MovementController : MonoBehaviour
     void Start()
     {
         _myCharacterController = GetComponent<CharacterController>();
+        _myJumpController = GetComponent<JumpController>();
+
     }
 
     // Update is called once per frame
@@ -47,6 +51,9 @@ public class Character_MovementController : MonoBehaviour
             _movementSpeed = 0;
         }
 
-        _myCharacterController.Move(_movementSpeed * _movementDirection * Time.deltaTime);
+        _jumpDirection = _myJumpController.SetGravity();
+        _movementDirection = _movementDirection * _movementSpeed;
+
+        _myCharacterController.Move((_movementDirection + _jumpDirection) * Time.deltaTime);
     }
 }
