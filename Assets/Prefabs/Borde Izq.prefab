@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2154041880388074041}
   - component: {fileID: 252709187803966362}
   - component: {fileID: 169476107625456311}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Borde Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}

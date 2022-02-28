@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7985364988211268472}
   - component: {fileID: 6948162345853315095}
   - component: {fileID: -8723125023957846239}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Esq Inf Izq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
