@@ -5,8 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - New tag
-  - Estalactita
+  - Suelo
+  - Shot
   layers:
   - Default
   - TransparentFX
@@ -15,9 +15,9 @@ TagManager:
   - Water
   - UI
   - Suelo
-  - Ground
-  - Estalactita
   - Player
+  - Shot
+  - 
   - 
   - 
   - 

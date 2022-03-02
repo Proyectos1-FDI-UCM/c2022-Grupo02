@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7481289695414392162}
   - component: {fileID: 544930828719548501}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Bloque Trampa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5615093881254815824}
   - component: {fileID: 4714649423951104668}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Imagen1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
