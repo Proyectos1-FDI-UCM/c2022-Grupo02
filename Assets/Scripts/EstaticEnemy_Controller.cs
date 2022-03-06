@@ -7,16 +7,27 @@ public class EstaticEnemy_Controller : MonoBehaviour
     #region parameters
     private float change;
     #endregion
+    #region references
+    [SerializeField]
+    Transform _ScottieTransform;
+    Transform _myTransform;
+    #endregion
 
     #region methods
-    public void EatLeft()
+    private void EatLeft()
     {
         gameObject.GetComponent<Animator>().SetBool("EatLeft", true);
     }
 
-    public void EatRight()
+    private void EatRight()
     {
         gameObject.GetComponent<Animator>().SetBool("EatRight", true);
+    }
+
+    public void Choose()
+    {
+        if (_ScottieTransform.position.x > _myTransform.position.x) { EatLeft(); }
+        else if (_ScottieTransform.position.x < _myTransform.position.x) { EatRight(); }
     }
     #endregion
 

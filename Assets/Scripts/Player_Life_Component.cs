@@ -10,10 +10,6 @@ public class Player_Life_Component : MonoBehaviour
     private int _maxLife = 3;
     [SerializeField]
     private int _hitDamage = 1;
-    private Transform _myTransform;
-    private Transform _targetTransform;
-    [SerializeField]
-    private GameObject _targetObject;
     #endregion
 
     #region properties
@@ -26,8 +22,7 @@ public class Player_Life_Component : MonoBehaviour
     {
         EstaticEnemy_Controller enemy = collision.gameObject.GetComponent<EstaticEnemy_Controller>();
 
-        if(enemy != null && _myTransform.position.x > _targetTransform.position.x) { enemy.EatLeft();}
-        else if(enemy != null && _myTransform.position.x < _targetTransform.position.x) { enemy.EatRight(); }
+        if(enemy != null) { enemy.Choose();}
         Damage();
     }
 
@@ -44,8 +39,6 @@ public class Player_Life_Component : MonoBehaviour
     void Start()
     {
         _currentLife = _maxLife;
-        _myTransform = GetComponent<Transform>();
-        _targetTransform = _targetObject.GetComponent<Transform>();
     }
 
         
