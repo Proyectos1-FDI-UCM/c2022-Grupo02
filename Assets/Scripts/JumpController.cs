@@ -36,12 +36,12 @@ public class JumpController : MonoBehaviour
         {
             _gravitySpeed -= _gravity * (Time.deltaTime * Time.deltaTime);
             velocity.y -= _gravitySpeed;
-            Debug.Log(velocity.y);
+            //Debug.Log(velocity.y);
         }
         else
         {
             _gravitySpeed = 0;
-            Debug.Log("estoy en el suelo");
+            //Debug.Log("estoy en el suelo");
         }
         return velocity;
     }

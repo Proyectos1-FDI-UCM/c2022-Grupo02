@@ -6,6 +6,8 @@ public class EstaticEnemy_Controller : MonoBehaviour
 {
     #region parameters
     private float change;
+    [SerializeField]
+    private int health = 3;
     #endregion
 
     #region methods
@@ -28,5 +30,17 @@ public class EstaticEnemy_Controller : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("EatLeft", false);
             change = Time.time + 0.5f;
         }
+    }
+    public void Damage(int damage)
+    {
+        health -= damage;
+        if(health <= 0)
+        {
+            Die();
+        }
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }
