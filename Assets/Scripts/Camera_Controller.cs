@@ -6,7 +6,7 @@ public class Camera_Controller : MonoBehaviour
 {
     [SerializeField]
     float followSpeed = 1, yPos;
-    
+
     [SerializeField]
     Transform _targetTransform;
 
@@ -23,6 +23,6 @@ public class Camera_Controller : MonoBehaviour
         Vector2 targetPos = _targetTransform.position;
         Vector2 newPos = Vector2.Lerp(_myTransform.position, targetPos, followSpeed * Time.deltaTime);
 
-        _myTransform.position = new Vector3(newPos.x, /*newPos.y + */yPos, -15f);
+        _myTransform.position = new Vector3(newPos.x, newPos.y + yPos, -15f);
     }
 }

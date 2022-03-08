@@ -36,12 +36,12 @@ public class ShotMovementController : MonoBehaviour
                 EstaticEnemy_Controller enemy = hitinfo.GetComponent<EstaticEnemy_Controller>();
                 enemy.Damage(damage);
             }
-            if (hitinfo.tag == "EnemyF")
+            else if (hitinfo.tag == "EnemyF")
             {
                 FlyingEnemy_Controller enemy = hitinfo.GetComponent<FlyingEnemy_Controller>();
                 enemy.Damage(damage);
             }
-            if (hitinfo.tag == "EnemyG")
+            else if (hitinfo.tag == "EnemyG")
             {
                 GroundEnemy_Controller enemy = hitinfo.GetComponent<GroundEnemy_Controller>();
                 enemy.Damage(damage);

@@ -9,7 +9,9 @@ public class Player_Life_Component : MonoBehaviour
     [SerializeField]
     private int _maxLife = 3;
     [SerializeField]
-    private int _hitDamage = 1;
+    private int health = 1;
+    [SerializeField]
+    private int damage = 1;
     #endregion
 
     #region properties
@@ -21,18 +23,18 @@ public class Player_Life_Component : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         EstaticEnemy_Controller enemy = collision.gameObject.GetComponent<EstaticEnemy_Controller>();
-
-        if(enemy != null) { enemy.Choose();}
-        Damage();
     }
-
-    public void Damage()
+    public void Dano(int damage)
     {
-        _currentLife = _currentLife - _hitDamage;
-        if (_currentLife == 0)
+        health -= damage;
+        if (health <= 0)
         {
-            _currentLife = _maxLife;
+            Die();
         }
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
     #endregion
 
