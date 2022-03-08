@@ -8,7 +8,7 @@ public class EstaticEnemy_Controller : MonoBehaviour
     private float change;
     [SerializeField]
     private int health = 3;
-    private int damagetoplayer = 3;
+    private int damagetoplayer = 0;
     #endregion
     #region references
     [SerializeField]
