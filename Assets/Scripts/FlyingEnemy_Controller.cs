@@ -8,6 +8,9 @@ public class FlyingEnemy_Controller : MonoBehaviour
     private float _speed;
 
     [SerializeField]
+    private int health = 1;
+
+    [SerializeField]
     private float _range;
 
     [SerializeField]
@@ -46,6 +49,18 @@ public class FlyingEnemy_Controller : MonoBehaviour
         }
 
 
+    }
+    public void Damage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 
 }

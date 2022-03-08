@@ -11,6 +11,7 @@ public class Character_MovementController : MonoBehaviour
     float maxSpeed = 3f;
     [SerializeField]
     private float _movementSpeed = 0f;
+    private bool change = false;
     #endregion
 
     #region references
@@ -56,4 +57,5 @@ public class Character_MovementController : MonoBehaviour
 
         _myCharacterController.Move((_movementDirection + _jumpDirection) * Time.deltaTime);
     }
+
 }

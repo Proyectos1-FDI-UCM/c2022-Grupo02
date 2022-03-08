@@ -10,6 +10,8 @@ public class GroundEnemy_Controller : MonoBehaviour
     [SerializeField]
     private Vector3[] positions;
     private int index;
+    [SerializeField]
+    private int health = 2;
     #endregion
 
 
@@ -31,5 +33,17 @@ public class GroundEnemy_Controller : MonoBehaviour
                 index++;
             }
         }
+    }
+    public void Damage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    private void Die()
+    {
+        Destroy(gameObject);
     }
 }

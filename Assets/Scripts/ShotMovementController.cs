@@ -7,10 +7,13 @@ public class ShotMovementController : MonoBehaviour
     [SerializeField]
     private float LifeTime = 6;
     private float live = 0;
+    [SerializeField]
+    private float speed = 20f;
+    [SerializeField]
+    private int damage = 1;
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -21,6 +24,31 @@ public class ShotMovementController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    private void OnTriggerEnter(Collider hitinfo)
+    {
+
+        Debug.Log(hitinfo.tag);
+        if(hitinfo.tag != "Player")//Se que esto esta feisimo pero he tardado 3 dias en hacerlo
+        {                          //cambiarlo es problema del jose del futuro ahora funciona
+            if(hitinfo.tag == "EnemyE")
+            {
+                EstaticEnemy_Controller enemy = hitinfo.GetComponent<EstaticEnemy_Controller>();
+                enemy.Damage(damage);
+            }
+            if (hitinfo.tag == "EnemyF")
+            {
+                FlyingEnemy_Controller enemy = hitinfo.GetComponent<FlyingEnemy_Controller>();
+                enemy.Damage(damage);
+            }
+            if (hitinfo.tag == "EnemyG")
+            {
+                GroundEnemy_Controller enemy = hitinfo.GetComponent<GroundEnemy_Controller>();
+                enemy.Damage(damage);
+            }
+            Destroy(this.gameObject);
+        }
+        
     }
 }
 

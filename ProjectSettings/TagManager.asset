@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Suelo
   - Shot
+  - EnemyE
+  - EnemyF
+  - EnemyG
   layers:
   - Default
   - TransparentFX

@@ -64,8 +64,8 @@ public class InputManager : MonoBehaviour
         if(Time.time > canfire)
         {
             GameObject newshoot =  Instantiate(myShot, shoopos.position, Quaternion.identity); //disparar
-            Debug.Log(dir);
-            newshoot.GetComponent<Rigidbody2D>(/*Animaciones de la bala*/).velocity = new Vector2 (ShotSpeed * dir *Time.fixedDeltaTime, 0f);
+            //Debug.Log(dir);
+            newshoot.GetComponent<Rigidbody>(/*Animaciones de la bala*/).velocity = new Vector3 (ShotSpeed * dir *Time.fixedDeltaTime, 0f);
             canfire = Time.time +firerate;//indica la cadencia del tiro
         }
     }
