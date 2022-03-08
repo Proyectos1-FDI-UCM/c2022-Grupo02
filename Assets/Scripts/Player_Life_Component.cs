@@ -10,8 +10,6 @@ public class Player_Life_Component : MonoBehaviour
     private int _maxLife = 3;
     [SerializeField]
     private int health = 1;
-    [SerializeField]
-    private int damage = 1;
     #endregion
 
     #region properties
@@ -24,7 +22,7 @@ public class Player_Life_Component : MonoBehaviour
     {
         EstaticEnemy_Controller enemy = collision.gameObject.GetComponent<EstaticEnemy_Controller>();
     }
-    public void Dano(int damage)
+    public void damage(int damage)
     {
         health -= damage;
         if (health <= 0)

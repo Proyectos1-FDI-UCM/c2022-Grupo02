@@ -8,7 +8,7 @@ public class EstaticEnemy_Controller : MonoBehaviour
     private float change;
     [SerializeField]
     private int health = 3;
-    private int Dano = 3;
+    private int damagetoplayer = 3;
     #endregion
     #region references
     [SerializeField]
@@ -51,8 +51,8 @@ public class EstaticEnemy_Controller : MonoBehaviour
         
             if (hitinfo.tag == "Player")
             {
-                Character_MovementController enemy = hitinfo.GetComponent<Character_MovementController>();
-                enemy.Damage(Dano);
+                Player_Life_Component player = hitinfo.GetComponent<Player_Life_Component>();
+                player.damage(damagetoplayer);
             }
 
         }
