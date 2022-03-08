@@ -8,6 +8,8 @@ public class GroundEnemy_Controller : MonoBehaviour
     [SerializeField]
     private float speed;
     [SerializeField]
+    private int damagetoplayer = 2;
+    [SerializeField]
     private Vector3[] positions;
     private int index;
     [SerializeField]
@@ -32,6 +34,17 @@ public class GroundEnemy_Controller : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().flipX = false;
                 index++;
             }
+        }
+    }
+    private void OnTriggerEnter(Collider hitinfo)
+    {
+
+        Debug.Log(hitinfo.tag);
+
+        if (hitinfo.tag == "Player")
+        {
+            Player_Life_Component player = hitinfo.GetComponent<Player_Life_Component>();
+            player.damage(damagetoplayer);
         }
     }
     public void Damage(int damage)

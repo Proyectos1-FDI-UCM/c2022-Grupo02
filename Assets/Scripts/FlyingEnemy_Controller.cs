@@ -8,6 +8,9 @@ public class FlyingEnemy_Controller : MonoBehaviour
     private float _speed;
 
     [SerializeField]
+    private int damagetoplayer = 1;
+
+    [SerializeField]
     private int health = 1;
 
     [SerializeField]
@@ -49,6 +52,17 @@ public class FlyingEnemy_Controller : MonoBehaviour
         }
 
 
+    }
+    private void OnTriggerEnter(Collider hitinfo)
+    {
+
+        Debug.Log(hitinfo.tag);
+
+        if (hitinfo.tag == "Player")
+        {
+            Player_Life_Component player = hitinfo.GetComponent<Player_Life_Component>();
+            player.damage(damagetoplayer);
+        }
     }
     public void Damage(int damage)
     {
