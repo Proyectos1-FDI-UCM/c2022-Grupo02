@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8753694480856791670}
   - component: {fileID: 4411267581819490917}
-  - component: {fileID: 2299404764258570217}
   m_Layer: 1
   m_Name: Negro
   m_TagString: Untagged
@@ -83,16 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &2299404764258570217
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5198083066354777705}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.18094158, y: 0.17934367, z: 0.2}
-  m_Center: {x: 0.00039958954, y: 0.0011985898, z: 0}
