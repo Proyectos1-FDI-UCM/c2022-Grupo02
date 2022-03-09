@@ -56,8 +56,7 @@ public class EstaticEnemy_Controller : MonoBehaviour
             }
     }
 
-
-     public void Damage(int Damage)
+    public void Damage(int Damage)
     {
         health -= Damage;
         if(health <= 0)
@@ -65,6 +64,7 @@ public class EstaticEnemy_Controller : MonoBehaviour
             Die();
         }
     }
+
     private void Die()
     {
         Destroy(gameObject);

@@ -46,6 +46,11 @@ public class ShotMovementController : MonoBehaviour
                 GroundEnemy_Controller enemy = hitinfo.GetComponent<GroundEnemy_Controller>();
                 enemy.Damage(damage);
             }
+            else if (hitinfo.tag == "Bloque Destructible")
+            {
+                EnemyDamageManager enemy = hitinfo.GetComponent<EnemyDamageManager>();
+                enemy.Damage(damage);
+            }
             Destroy(this.gameObject);
         }
         

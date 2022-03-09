@@ -9,6 +9,7 @@ TagManager:
   - EnemyE
   - EnemyF
   - EnemyG
+  - Bloque Destructible
   layers:
   - Default
   - TransparentFX
