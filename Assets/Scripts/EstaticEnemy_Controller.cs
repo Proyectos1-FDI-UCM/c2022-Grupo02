@@ -8,10 +8,13 @@ public class EstaticEnemy_Controller : MonoBehaviour
     private float change;
     [SerializeField]
     private int health = 3;
-    private int damagetoplayer = 3;
+    [SerializeField]
+    private int damagetoplayer = 0;
     #endregion
+
     #region references
     [SerializeField]
+    GameObject _Scottie;
     Transform _ScottieTransform;
     Transform _myTransform;
     #endregion
@@ -56,7 +59,8 @@ public class EstaticEnemy_Controller : MonoBehaviour
             }
     }
 
-    public void Damage(int Damage)
+
+     public void Damage(int Damage)
     {
         health -= Damage;
         if(health <= 0)
@@ -64,9 +68,13 @@ public class EstaticEnemy_Controller : MonoBehaviour
             Die();
         }
     }
-
     private void Die()
     {
         Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        _ScottieTransform = gameObject.GetComponent<Transform>();
     }
 }

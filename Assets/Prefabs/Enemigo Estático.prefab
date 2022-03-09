@@ -118,6 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
+  damagetoplayer: 3
+  _Scottie: {fileID: 1394500691170585390, guid: ea061fb8568214145a0ef32caaa946f2, type: 3}
 --- !u!65 &7796653991983665558
 BoxCollider:
   m_ObjectHideFlags: 0
