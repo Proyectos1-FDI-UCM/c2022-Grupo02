@@ -15,31 +15,20 @@ public class EstaticEnemy_Controller : MonoBehaviour
     #region references
     [SerializeField]
     GameObject _Scottie;
-    Transform _ScottieTransform;
     Transform _myTransform;
     #endregion
 
     #region methods
-    private void EatLeft()
-    {
-        gameObject.GetComponent<Animator>().SetBool("EatLeft", true);
-    }
-
-    private void EatRight()
-    {
-        gameObject.GetComponent<Animator>().SetBool("EatRight", true);
-    }
-
     public void Choose()
     {
-        if (_ScottieTransform.position.x > _myTransform.position.x) { EatLeft(); }
-        else if (_ScottieTransform.position.x < _myTransform.position.x) { EatRight(); }
+        if (_Scottie.transform.position.x > _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatLeft", true); }// animación de comer izquierda
+        else if (_Scottie.transform.position.x < _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatRight", true); }// animación de comer derecha
     }
     #endregion
 
     void Update()
     {
-        if(Time.time >= change)
+        if(Time.time >= change)// cambiar los booleanos a false tras un tiempo
         {
             gameObject.GetComponent<Animator>().SetBool("EatRight", false);
             gameObject.GetComponent<Animator>().SetBool("EatLeft", false);
@@ -47,34 +36,30 @@ public class EstaticEnemy_Controller : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider hitinfo)
+    private void OnTriggerEnter(Collider collision)
     {
+        Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
 
-        Debug.Log(hitinfo.tag);
-        
-            if (hitinfo.tag == "Player")
-            {
-                Player_Life_Component player = hitinfo.GetComponent<Player_Life_Component>();
-                player.damage(damagetoplayer);
-            }
+        if (player != null)
+        {
+            Choose();
+            player.damage(damagetoplayer);
+        }
     }
 
 
-     public void Damage(int Damage)
+    public void Damage(int Damage)
     {
         health -= Damage;
         if(health <= 0)
         {
-            Die();
+            Destroy(gameObject);
         }
-    }
-    private void Die()
-    {
-        Destroy(gameObject);
     }
 
     void Start()
     {
-        _ScottieTransform = gameObject.GetComponent<Transform>();
+        _myTransform = GetComponent<Transform>();
+        _Scottie = GameObject.Find("Scottie");
     }
 }

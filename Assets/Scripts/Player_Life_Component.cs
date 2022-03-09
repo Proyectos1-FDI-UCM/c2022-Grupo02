@@ -9,7 +9,8 @@ public class Player_Life_Component : MonoBehaviour
     [SerializeField]
     private int _maxLife = 3;
     [SerializeField]
-    private int health = 1;
+    private int health = 3;
+    private float change;
     #endregion
 
     #region properties
@@ -17,28 +18,29 @@ public class Player_Life_Component : MonoBehaviour
     #endregion
 
     #region methods
-
-    private void OnTriggerEnter(Collider collision)
-    {
-        EstaticEnemy_Controller enemy = collision.gameObject.GetComponent<EstaticEnemy_Controller>();
-    }
     public void damage(int damage)
     {
+        gameObject.GetComponent<Animator>().SetBool("Hit", true);
         health -= damage;
         if (health <= 0)
         {
-            Die();
+            gameObject.GetComponent<Animator>().SetBool("Death", true);
         }
-    }
-    private void Die()
-    {
-        Destroy(gameObject);
     }
     #endregion
 
     void Start()
     {
         _currentLife = _maxLife;
+    }
+
+    void Update()
+    {
+        if (Time.time >= change)// cambiar el booleano a false tras un tiempo
+        {
+            gameObject.GetComponent<Animator>().SetBool("Hit", false);
+            change = Time.time + 0.5f;
+        }
     }
 
         

@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 248109734932515174}
   - component: {fileID: 248109734932515175}
   - component: {fileID: 248109734932515194}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Enemigo Volador
-  m_TagString: EnemyF
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  damagetoplayer: 1
   health: 1
   _range: 12
   _characterTransform: {fileID: 0}

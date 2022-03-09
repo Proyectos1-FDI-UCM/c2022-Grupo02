@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Camera_Controller : MonoBehaviour
 {
+    #region parameters
     [SerializeField]
     float followSpeed = 1, yPos;
+    #endregion
 
+    #region references
     [SerializeField]
     Transform _targetTransform;
-
     Transform _myTransform;
+    #endregion
+
     // Start is called before the first frame update
     void Start()
     {

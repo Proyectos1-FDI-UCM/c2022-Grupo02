@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 533743557559126925}
   - component: {fileID: 533743557559126914}
   - component: {fileID: 1451722416647569310}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Enemigo Terrestre
-  m_TagString: EnemyG
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 574812174903247844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 68.51, y: -3.74, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  damagetoplayer: 2
   positions:
   - {x: 68.35, y: -3.74, z: 0}
   - {x: 87.73, y: -3.74, z: 0}
@@ -111,7 +112,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574812174903247844}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.09651552
   m_Height: 0.23691936

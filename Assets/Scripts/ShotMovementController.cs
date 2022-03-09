@@ -4,51 +4,50 @@ using UnityEngine;
 
 public class ShotMovementController : MonoBehaviour
 {
+    #region parameters
     [SerializeField]
     private float LifeTime = 6;
     private float live = 0;
     [SerializeField]
-    private float speed = 20f;
-    [SerializeField]
     private int damage = 1;
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    #endregion 
 
-    // Update is called once per frame
-    void Update()
+    #region methods
+    private void OnTriggerEnter(Collider collision)
     {
-        live = live +(1*Time.fixedDeltaTime);
-        if(live>= LifeTime)
-        {
-            Destroy(this.gameObject);
-        }
-    }
-    private void OnTriggerEnter(Collider hitinfo)
-    {
+        EstaticEnemy_Controller EstaticEnemy = collision.gameObject.GetComponent<EstaticEnemy_Controller>();
+        FlyingEnemy_Controller FlyingEnemy = collision.gameObject.GetComponent<FlyingEnemy_Controller>();
+        GroundEnemy_Controller GroundEnemy = collision.gameObject.GetComponent<GroundEnemy_Controller>();
+        Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
 
-        Debug.Log(hitinfo.tag);
-        if(hitinfo.tag != "Player")//Se que esto esta feisimo pero he tardado 3 dias en hacerlo
-        {                          //cambiarlo es problema del jose del futuro ahora funciona
-            if(hitinfo.tag == "EnemyE")
+        if (player == null)
+        {                          
+            if (EstaticEnemy != null)
             {
-                EstaticEnemy_Controller enemy = hitinfo.GetComponent<EstaticEnemy_Controller>();
-                enemy.Damage(damage);
+                EstaticEnemy.Damage(damage);
             }
-            else if (hitinfo.tag == "EnemyF")
+            else if (FlyingEnemy != null)
             {
-                FlyingEnemy_Controller enemy = hitinfo.GetComponent<FlyingEnemy_Controller>();
-                enemy.Damage(damage);
+                FlyingEnemy.Damage(damage);
             }
-            else if (hitinfo.tag == "EnemyG")
+            else if (GroundEnemy != null)
             {
-                GroundEnemy_Controller enemy = hitinfo.GetComponent<GroundEnemy_Controller>();
-                enemy.Damage(damage);
+                GroundEnemy.Damage(damage);
             }
             Destroy(this.gameObject);
         }
         
+    }
+    #endregion
+
+    // Update is called once per frame
+    void Update()
+    {
+        live = live + (1 * Time.fixedDeltaTime);
+        if (live >= LifeTime)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
 

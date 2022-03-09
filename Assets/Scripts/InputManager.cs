@@ -11,14 +11,17 @@ public class InputManager : MonoBehaviour
     private Transform _myTransform;
     private JumpController _jumpController;
     [SerializeField]
-    private float firerate = 0.25f;
+    private GameObject myShot;
+    public Transform shoopos;
+    #endregion
+
+    #region parameters
+    [SerializeField]
+    private float firerate = 0.5f;
     [SerializeField]
     private float canfire = 0.0f;
     [SerializeField]
     private float ShotSpeed = 0.0f;
-    [SerializeField]
-    private GameObject myShot;
-    public Transform shoopos;
     public int dir;
     #endregion
 
@@ -64,8 +67,7 @@ public class InputManager : MonoBehaviour
         if(Time.time > canfire)
         {
             GameObject newshoot =  Instantiate(myShot, shoopos.position, Quaternion.identity); //disparar
-            //Debug.Log(dir);
-            newshoot.GetComponent<Rigidbody>(/*Animaciones de la bala*/).velocity = new Vector3 (ShotSpeed * dir *Time.fixedDeltaTime, 0f);
+            newshoot.GetComponent<Rigidbody>().velocity = new Vector3 (ShotSpeed * dir *Time.fixedDeltaTime, 0f);
             canfire = Time.time +firerate;//indica la cadencia del tiro
         }
     }

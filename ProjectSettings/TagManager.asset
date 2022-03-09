@@ -4,12 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Suelo
   - Shot
-  - EnemyE
-  - EnemyF
-  - EnemyG
-  - Bloque Destructible
   layers:
   - Default
   - TransparentFX

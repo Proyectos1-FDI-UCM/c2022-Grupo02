@@ -7,6 +7,7 @@ public class GroundEnemy_Controller : MonoBehaviour
     #region parameters
     [SerializeField]
     private float speed;
+    private float _AuxSpeed;
     [SerializeField]
     private int damagetoplayer = 2;
     [SerializeField]
@@ -14,13 +15,56 @@ public class GroundEnemy_Controller : MonoBehaviour
     private int index;
     [SerializeField]
     private int health = 2;
+    private float change;
     #endregion
 
+    #region references
+    private Transform _myTransform;
+    private GameObject _Scottie;
+    #endregion
+
+    #region methods
+    private void OnTriggerEnter(Collider collision)
+    {
+        Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
+
+        if (player != null)
+        {
+            if (gameObject.GetComponent<SpriteRenderer>().flipX && _Scottie.transform.position.x > _myTransform.position.x) {
+                gameObject.GetComponent<SpriteRenderer>().flipX = false;// girar izquierda 
+                index++;
+            }
+            else if (!gameObject.GetComponent<SpriteRenderer>().flipX && _Scottie.transform.position.x < _myTransform.position.x) {
+                gameObject.GetComponent<SpriteRenderer>().flipX = true;// girar a la derecha
+                index = 0;
+            }
+            gameObject.GetComponent<Animator>().SetBool("Ataque", true);
+            _AuxSpeed = 0;
+            player.damage(damagetoplayer);
+        }
+    }
+
+    public void Damage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    #endregion
+
+    void Start()
+    {
+        _Scottie = GameObject.Find("Scottie");
+        _AuxSpeed = speed;
+        _myTransform = GetComponent<Transform>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
+        transform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * _AuxSpeed);
 
         if (transform.position == positions[index])
         {
@@ -35,28 +79,14 @@ public class GroundEnemy_Controller : MonoBehaviour
                 index++;
             }
         }
-    }
-    private void OnTriggerEnter(Collider hitinfo)
-    {
 
-        Debug.Log(hitinfo.tag);
-
-        if (hitinfo.tag == "Player")
+        if (Time.time >= change)// cambiar el booleano a false tras un tiempo
         {
-            Player_Life_Component player = hitinfo.GetComponent<Player_Life_Component>();
-            player.damage(damagetoplayer);
+            gameObject.GetComponent<Animator>().SetBool("Ataque", false);
+            _AuxSpeed = speed;
+            change = Time.time + 0.5f;
         }
     }
-    public void Damage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-    private void Die()
-    {
-        Destroy(gameObject);
-    }
+
+
 }
