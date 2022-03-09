@@ -33,7 +33,7 @@ public class ShotMovementController : MonoBehaviour
         {                          //cambiarlo es problema del jose del futuro ahora funciona
             if(hitinfo.tag == "EnemyE")
             {
-                EstaticEnemy_Controller enemy = hitinfo.GetComponent<EstaticEnemy_Controller>();
+                EnemyDamageManager enemy = hitinfo.GetComponent<EnemyDamageManager>();
                 enemy.Damage(damage);
             }
             else if (hitinfo.tag == "EnemyF")
@@ -44,6 +44,11 @@ public class ShotMovementController : MonoBehaviour
             else if (hitinfo.tag == "EnemyG")
             {
                 GroundEnemy_Controller enemy = hitinfo.GetComponent<GroundEnemy_Controller>();
+                enemy.Damage(damage);
+            }
+            else if (hitinfo.tag == "Bloque Destructible")
+            {
+                EnemyDamageManager enemy = hitinfo.GetComponent<EnemyDamageManager>();
                 enemy.Damage(damage);
             }
             Destroy(this.gameObject);
