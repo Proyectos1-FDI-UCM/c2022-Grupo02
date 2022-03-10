@@ -68,7 +68,7 @@ public class FlyingEnemy_Controller : MonoBehaviour
         }
         else if (Vector2.Distance(_batTransform.position, _Scottie.transform.position) < _range)
         {
-            Vector2 _newPosition = Vector2.MoveTowards(_batRigidBody.position, _target, _speed / 2.0f * Time.deltaTime);
+            Vector2 _newPosition = Vector2.MoveTowards(_batRigidBody.position, _target, _speed / 1.5f * Time.deltaTime);
             _batRigidBody.MovePosition(_newPosition);
         }
 
