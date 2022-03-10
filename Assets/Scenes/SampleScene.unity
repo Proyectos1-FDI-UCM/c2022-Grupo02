@@ -16680,8 +16680,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ea41af85e8d8364c9826625af33bce6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 10
-  health: 10
+  _maxLife: 9
+  health: 9
 --- !u!114 &1345503349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16825,7 +16825,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345503346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 127.2, y: 12.4, z: 0}
+  m_LocalPosition: {x: 148.25, y: 7.84, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 694340529}
@@ -25854,11 +25854,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5301678022150726531, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 140.4
+      value: 161.02
       objectReference: {fileID: 0}
     - target: {fileID: 5301678022150726531, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.32
+      value: 3.66
       objectReference: {fileID: 0}
     - target: {fileID: 5301678022150726531, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: m_LocalPosition.z
