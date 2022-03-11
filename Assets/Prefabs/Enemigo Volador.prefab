@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 248109734932515174}
   - component: {fileID: 248109734932515175}
   - component: {fileID: 248109734932515194}
+  - component: {fileID: 7125248089480863754}
   m_Layer: 3
   m_Name: Enemigo Volador
   m_TagString: Enemy
@@ -95,13 +96,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 248109734932515172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c6083633d8f1f84c98a03da566619ed, type: 3}
+  m_Script: {fileID: 11500000, guid: 1ff351b3152ec2f40adf582873160fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 0
   damagetoplayer: 1
-  health: 1
-  _range: 12
+  _range: 0
   _characterTransform: {fileID: 0}
   _batTransform: {fileID: 248109734932515195}
   _batRigidBody: {fileID: 248109734932515175}
@@ -154,3 +154,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7125248089480863754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248109734932515172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf039bf728981f941bee947ab279b9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1

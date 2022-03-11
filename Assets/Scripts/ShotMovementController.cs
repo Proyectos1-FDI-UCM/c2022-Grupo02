@@ -15,26 +15,12 @@ public class ShotMovementController : MonoBehaviour
     #region methods
     private void OnTriggerEnter(Collider collision)
     {
-        EstaticEnemy_Controller EstaticEnemy = collision.gameObject.GetComponent<EstaticEnemy_Controller>();
-        FlyingEnemy_Controller FlyingEnemy = collision.gameObject.GetComponent<FlyingEnemy_Controller>();
-        GroundEnemy_Controller GroundEnemy = collision.gameObject.GetComponent<GroundEnemy_Controller>();
-        Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
-
-        if (player == null)
-        {                          
-            if (EstaticEnemy != null)
+        EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
+        if (enemy != null)
+        {
             {
-                EstaticEnemy.Damage(damage);
+                enemy.Damage(damage);
             }
-            else if (FlyingEnemy != null)
-            {
-                FlyingEnemy.Damage(damage);
-            }
-            else if (GroundEnemy != null)
-            {
-                GroundEnemy.Damage(damage);
-            }
-            Destroy(this.gameObject);
         }
         
     }

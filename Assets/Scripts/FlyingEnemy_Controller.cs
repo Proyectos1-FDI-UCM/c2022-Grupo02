@@ -12,9 +12,6 @@ public class FlyingEnemy_Controller : MonoBehaviour
     private int damagetoplayer = 1;
 
     [SerializeField]
-    private int health = 1;
-
-    [SerializeField]
     private float _range;
     #endregion
 
@@ -40,14 +37,6 @@ public class FlyingEnemy_Controller : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("Ataque", true);
             player.damage(damagetoplayer);
-        }
-    }
-    public void Damage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            Destroy(gameObject);
         }
     }
     #endregion

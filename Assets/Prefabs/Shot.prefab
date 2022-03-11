@@ -94,11 +94,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5984260381896386904}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 801dcca0c6799c5858bf164d3d866ca5, type: 3}
+  m_Script: {fileID: 11500000, guid: ba154e3a3293c5846899e1a565d17049, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LifeTime: 50
-  speed: 20
+  LifeTime: 6
   damage: 1
 --- !u!135 &-5009980922322660863
 SphereCollider:

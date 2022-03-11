@@ -7,8 +7,6 @@ public class EstaticEnemy_Controller : MonoBehaviour
     #region parameters
     private float change;
     [SerializeField]
-    private int health = 3;
-    [SerializeField]
     private int damagetoplayer = 0;
     #endregion
 
@@ -44,16 +42,6 @@ public class EstaticEnemy_Controller : MonoBehaviour
         {
             Choose();
             player.damage(damagetoplayer);
-        }
-    }
-
-
-    public void Damage(int Damage)
-    {
-        health -= Damage;
-        if(health <= 0)
-        {
-            Destroy(gameObject);
         }
     }
 

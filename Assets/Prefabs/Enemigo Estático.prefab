@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7555014374031945928}
   - component: {fileID: 7796653991983665558}
   - component: {fileID: 4650450660159816838}
+  - component: {fileID: 7593581702694476303}
   m_Layer: 3
   m_Name: "Enemigo Est\xE1tico"
   m_TagString: Untagged
@@ -114,12 +115,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 7691356556294723321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2de41a93565ff014d90b3f45f1ca59fa, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b7c010bf4f2aec43a97c0078013950d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  damagetoplayer: 3
-  _Scottie: {fileID: 1394500691170585390, guid: ea061fb8568214145a0ef32caaa946f2, type: 3}
+  damagetoplayer: 0
+  _Scottie: {fileID: 0}
 --- !u!65 &7796653991983665558
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -146,3 +146,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.42926311, y: 0.49700028, z: 0.2}
   m_Center: {x: -0.010035038, y: -0.071499854, z: 0}
+--- !u!114 &7593581702694476303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7691356556294723321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf039bf728981f941bee947ab279b9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1

@@ -13,8 +13,6 @@ public class GroundEnemy_Controller : MonoBehaviour
     [SerializeField]
     private Vector3[] positions;
     private int index;
-    [SerializeField]
-    private int health = 2;
     private float change;
     #endregion
 
@@ -41,15 +39,6 @@ public class GroundEnemy_Controller : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Ataque", true);
             _AuxSpeed = 0;
             player.damage(damagetoplayer);
-        }
-    }
-
-    public void Damage(int damage)
-    {
-        health -= damage;
-        if (health <= 0)
-        {
-            Destroy(gameObject);
         }
     }
     #endregion
