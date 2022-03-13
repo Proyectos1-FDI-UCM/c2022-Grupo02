@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   damagetoplayer: 1
-  _range: 50
+  _range: 25
   _characterTransform: {fileID: 0}
   _batTransform: {fileID: 248109734932515195}
   _batRigidBody: {fileID: 248109734932515175}
@@ -133,7 +133,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 120
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!95 &248109734932515194
 Animator:

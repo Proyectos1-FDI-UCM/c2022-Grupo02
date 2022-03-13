@@ -10,12 +10,20 @@ public class InputManager : MonoBehaviour
     private CharacterController _myCharacterController;
     private Transform _myTransform;
     private JumpController _jumpController;
-    private AttackController _AttackController;
+    [SerializeField]
+    private GameObject myShot;
+    public Transform shoopos;
     #endregion
 
-
+    #region parameters
+    [SerializeField]
+    private float firerate = 0.5f;
+    [SerializeField]
+    private float canfire = 0.0f;
+    [SerializeField]
+    private float ShotSpeed = 0.0f;
     public int dir;
-
+    #endregion
 
     void Start()
     {
@@ -23,7 +31,6 @@ public class InputManager : MonoBehaviour
         _myCharacterController = GetComponent<CharacterController>();
         _myTransform = GetComponent<Transform>();
         _jumpController = GetComponent<JumpController>();
-        _AttackController = GetComponent<AttackController>();
         dir = +1;
     }
 
@@ -51,9 +58,17 @@ public class InputManager : MonoBehaviour
         }
         if(Input.GetMouseButton(0))
         {
-            _AttackController.Shoot(dir);
+            Shoot();
         }
         _myCharacterMovementController.SetDirection(movementDirection);
     }
-
+    private void Shoot()
+    {
+        if(Time.time > canfire)
+        {
+            GameObject newshoot =  Instantiate(myShot, shoopos.position, Quaternion.identity); //disparar
+            newshoot.GetComponent<Rigidbody>().velocity = new Vector3 (ShotSpeed * dir *Time.fixedDeltaTime, 0f);
+            canfire = Time.time +firerate;//indica la cadencia del tiro
+        }
+    }
 }
