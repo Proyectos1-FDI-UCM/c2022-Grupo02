@@ -99,9 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff351b3152ec2f40adf582873160fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
+  _speed: 5
   damagetoplayer: 1
-  _range: 0
+  _range: 25
   _characterTransform: {fileID: 0}
   _batTransform: {fileID: 248109734932515195}
   _batRigidBody: {fileID: 248109734932515175}

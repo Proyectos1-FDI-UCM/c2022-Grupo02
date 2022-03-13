@@ -46,6 +46,11 @@ public class JumpController : MonoBehaviour
         }
         return velocity;
     }
+
+    public void TouchCeiling()
+    {
+        velocity.y = -2;
+    }
     #endregion
 
     // Start is called before the first frame update
@@ -56,6 +61,7 @@ public class JumpController : MonoBehaviour
 
     void Update()
     {
+        //Debug.Log(velocity.y);
         if (_myCharacterController.isGrounded)
         {
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);

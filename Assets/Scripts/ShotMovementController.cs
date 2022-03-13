@@ -22,7 +22,7 @@ public class ShotMovementController : MonoBehaviour
                 enemy.Damage(damage);
             }
         }
-        
+        Destroy(gameObject);
     }
     #endregion
 
