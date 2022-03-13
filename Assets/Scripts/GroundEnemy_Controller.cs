@@ -12,7 +12,7 @@ public class GroundEnemy_Controller : MonoBehaviour
     private int damagetoplayer = 2;
     [SerializeField]
     private Vector3[] positions;
-    private int index;
+    private int index = 0;
     private float change;
     #endregion
 
