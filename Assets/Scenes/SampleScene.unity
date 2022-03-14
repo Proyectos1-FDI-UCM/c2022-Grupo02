@@ -2974,6 +2974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rangoAtaque: {fileID: 228399533}
+  damage: 1
 --- !u!1001 &233038706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16822,7 +16823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b57db620f41e6f44b292321300f8e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _combateScottie: {fileID: 228399535}
   dir: 0
 --- !u!212 &1345503354
 SpriteRenderer:
