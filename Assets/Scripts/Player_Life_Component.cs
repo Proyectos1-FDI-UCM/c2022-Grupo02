@@ -17,21 +17,30 @@ public class Player_Life_Component : MonoBehaviour
     private int _currentLife;
     #endregion
 
+    #region references
+    [SerializeField]
+    private UI_Manager _myUIManager;
+    #endregion
+
     #region methods
     public void damage(int damage)
     {
+        Debug.Log(_myUIManager == null);
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
         health -= damage;
         if (health <= 0)
         {
             gameObject.GetComponent<Animator>().SetBool("Death", true);
         }
+        _myUIManager.UpdatePlayerLife(health);
+
     }
     #endregion
 
     void Start()
     {
         _currentLife = _maxLife;
+        //_myUIManager = GetComponent<UI_Manager>();
     }
 
     void Update()
