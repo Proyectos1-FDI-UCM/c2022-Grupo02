@@ -12,7 +12,7 @@ public class InputManager : MonoBehaviour
     private JumpController _jumpController;
     private AttackController _AttackController;
     [SerializeField]
-    private combateScottie rangoAtaque;
+    private combateScottie _combateScottie;
     #endregion
 
 
@@ -50,7 +50,7 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E))
         {
-            rangoAtaque.cambiabooleano();
+            _combateScottie.cambiabooleano();
         }
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {

@@ -20,7 +20,7 @@ public class combateScottie : MonoBehaviour
         if(cronoVox > 2f)
         {
             ataque = false;
-                cronoVox = 0;
+            cronoVox = 0;
         }
     }
     
