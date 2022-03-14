@@ -11,6 +11,8 @@ public class InputManager : MonoBehaviour
     private Transform _myTransform;
     private JumpController _jumpController;
     private AttackController _AttackController;
+    [SerializeField]
+    private combateScottie rangoAtaque;
     #endregion
 
 
@@ -45,7 +47,12 @@ public class InputManager : MonoBehaviour
             movementDirection.x = 1.0f;
             dir = +1;
         }
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            rangoAtaque.cambiabooleano();
+        }
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             _jumpController.Jump();
         }

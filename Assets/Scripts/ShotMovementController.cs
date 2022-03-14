@@ -32,11 +32,11 @@ public class ShotMovementController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        live = live + (1 * Time.fixedDeltaTime);
+        /*live = live + (1 * Time.fixedDeltaTime);
         if (live >= LifeTime)
         {
             Destroy(this.gameObject);
-        }
+        }*/
     }
 }
 

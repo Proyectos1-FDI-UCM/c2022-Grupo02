@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 684974816216685782}
   - component: {fileID: 5860652237343870994}
   - component: {fileID: -4427414133002135142}
-  - component: {fileID: 9222016878860590381}
-  m_Layer: 8
+  - component: {fileID: 2011332274768332029}
+  m_Layer: 3
   m_Name: Bloque Destructible
   m_TagString: Bloque Destructible
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3100964, y: 0.35109323, z: 0.2}
   m_Center: {x: 0.00495179, y: -0.009453386, z: 0}
---- !u!114 &9222016878860590381
+--- !u!114 &2011332274768332029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -106,6 +106,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2050056013097066305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dd34088cd453ee40b03f4ec3cfecd14, type: 3}
+  m_Script: {fileID: 11500000, guid: cf039bf728981f941bee947ab279b9a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 1

@@ -7,7 +7,7 @@ public class DestruccionBloque : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         ShotMovementController shoot = collision.gameObject.GetComponent<ShotMovementController>();
-        Debug.Log(shoot);
+        //Debug.Log(shoot);
         if (shoot != null)
         {
             Destroy(this.gameObject);

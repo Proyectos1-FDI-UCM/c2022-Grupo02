@@ -2913,6 +2913,68 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59ed4e924319aa14791f31e97c0dc683, type: 3}
+--- !u!1 &228399532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228399533}
+  - component: {fileID: 228399535}
+  - component: {fileID: 228399534}
+  m_Layer: 7
+  m_Name: rangoAtaque
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &228399533
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228399532}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.203, y: 0.019, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1345503355}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &228399534
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228399532}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0008947055, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.14121707
+--- !u!114 &228399535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228399532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e4db219700ad64ea814931f9d4b7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangoAtaque: {fileID: 228399533}
+  damage: 1
 --- !u!1001 &233038706
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16826,6 +16888,7 @@ Transform:
   m_Children:
   - {fileID: 694340529}
   - {fileID: 491875213}
+  - {fileID: 228399533}
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26007,7 +26070,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 229444329646109029, guid: c013a4adf26b95a49b22e2c8f79c48e6, type: 3}
       propertyPath: m_Name
-      value: Enemigo Terrestre (4)
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 682622311836351771, guid: c013a4adf26b95a49b22e2c8f79c48e6, type: 3}
       propertyPath: m_RootOrder
