@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject myShot;
-    public Transform shoopos;
     #region parameters
     [SerializeField]
     private float firerate = 0.5f;
@@ -15,17 +12,14 @@ public class AttackController : MonoBehaviour
     [SerializeField]
     private float ShotSpeed = 0.0f;
     #endregion
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #region references
+    [SerializeField]
+    private GameObject myShot;
+    public Transform shoopos;
+    #endregion
+
+    #region methods
     public void Shoot(int dir)
     {
         if (Time.time > canfire)
@@ -39,4 +33,5 @@ public class AttackController : MonoBehaviour
             canfire = Time.time + firerate;//indica la cadencia del tiro
         }
     }
+    #endregion
 }

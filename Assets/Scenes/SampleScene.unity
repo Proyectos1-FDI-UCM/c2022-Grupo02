@@ -17776,7 +17776,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cbe4d14b69f6ef748a64f854e0186034, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 909f5eafdf49dc24ea4a8b51af1ddf49, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17816,11 +17816,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d705c882972950d489d5628ccaf03f16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myShot: {fileID: 5984260381896386904, guid: f0e97b0c9e3c88c79ba8cd30282bb4fa, type: 3}
-  shoopos: {fileID: 694340529}
   firerate: 0.5
   canfire: 0
   ShotSpeed: 1200
+  myShot: {fileID: 5984260381896386904, guid: f0e97b0c9e3c88c79ba8cd30282bb4fa, type: 3}
+  shoopos: {fileID: 694340529}
 --- !u!4 &1349948419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6603310968814865291, guid: 59ed4e924319aa14791f31e97c0dc683, type: 3}

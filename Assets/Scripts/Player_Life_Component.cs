@@ -10,7 +10,7 @@ public class Player_Life_Component : MonoBehaviour
     private int _maxLife = 3;
     [SerializeField]
     private int health = 3;
-    private float change;
+    private float change = 0;
     #endregion
 
     #region properties
@@ -25,7 +25,7 @@ public class Player_Life_Component : MonoBehaviour
     #region methods
     public void damage(int damage)
     {
-        Debug.Log(_myUIManager == null);
+        //Debug.Log(_myUIManager == null);
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
         health -= damage;
         if (health <= 0)

@@ -15,8 +15,10 @@ public class InputManager : MonoBehaviour
     private combateScottie _combateScottie;
     #endregion
 
-
+    #region parameters
     public int dir;
+    private float change = 0;
+    #endregion
 
 
     void Start()
@@ -50,15 +52,26 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E))
         {
+            gameObject.GetComponent<Animator>().SetBool("Melé", true);
             _combateScottie.cambiabooleano();
         }
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             _jumpController.Jump();
         }
+
         if(Input.GetMouseButton(0))
         {
+            gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
+        }
+
+        if (Time.time >= change)// cambiar los booleanos a false tras un tiempo
+        {
+            gameObject.GetComponent<Animator>().SetBool("Adistancia", false);
+            gameObject.GetComponent<Animator>().SetBool("Melé", false);
+            change = Time.time + 0.25f;
         }
         _myCharacterMovementController.SetDirection(movementDirection);
     }

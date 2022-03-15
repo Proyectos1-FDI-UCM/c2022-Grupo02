@@ -21,7 +21,7 @@ public class ShotMovementController : MonoBehaviour
         {
             enemy.Damage(damage);
         }
-        if (player == null)//sin disparos infinitos preguntar si se puede hacer de otra forma o es admisible
+        if (player == null)//sin disparos infinitos preguntad si se puede hacer de otra forma o es admisible
         {
             Destroy(this.gameObject);
         }
@@ -29,14 +29,5 @@ public class ShotMovementController : MonoBehaviour
     }
     #endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*live = live + (1 * Time.fixedDeltaTime);
-        if (live >= LifeTime)
-        {
-            Destroy(this.gameObject);
-        }*/
-    }
 }
 

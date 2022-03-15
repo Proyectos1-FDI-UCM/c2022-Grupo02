@@ -23,7 +23,7 @@ public class UI_Manager : MonoBehaviour
         {
             hearts[i].SetActive(false);
         }
-        Debug.Log("Buenas tardes");
+        //Debug.Log("Buenas tardes");
     }
     #endregion
 
