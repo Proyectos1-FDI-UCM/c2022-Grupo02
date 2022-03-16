@@ -10,9 +10,9 @@ public class InputManager : MonoBehaviour
     private CharacterController _myCharacterController;
     private Transform _myTransform;
     private JumpController _jumpController;
-    private DistanceAttackController _DistanceAttackController;
-    [SerializeField]
     private AttackController _AttackController;
+    [SerializeField]
+    private combateScottie _combateScottie;
     #endregion
 
     #region parameters
@@ -27,7 +27,7 @@ public class InputManager : MonoBehaviour
         _myCharacterController = GetComponent<CharacterController>();
         _myTransform = GetComponent<Transform>();
         _jumpController = GetComponent<JumpController>();
-        _DistanceAttackController = GetComponent<DistanceAttackController>();
+        _AttackController = GetComponent<AttackController>();
         dir = +1;
     }
 
@@ -50,10 +50,10 @@ public class InputManager : MonoBehaviour
             dir = +1;
         }
 
-        if (Input.GetMouseButton(1))
+        if (Input.GetKey(KeyCode.E))
         {
             gameObject.GetComponent<Animator>().SetBool("Melé", true);
-            _AttackController.cambiabooleano();
+            _combateScottie.cambiabooleano();
         }
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
@@ -64,7 +64,7 @@ public class InputManager : MonoBehaviour
         if(Input.GetMouseButton(0))
         {
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
-            _DistanceAttackController.Shoot(dir);
+            _AttackController.Shoot(dir);
         }
 
         if (Time.time >= change)// cambiar los booleanos a false tras un tiempo

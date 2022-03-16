@@ -3217,8 +3217,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36297736, y: 0.24314758, z: 1}
-  m_Center: {x: -0.035274506, y: -0.02015688, z: 0}
+  m_Size: {x: 0.3938732, y: 0.41086745, z: 1}
+  m_Center: {x: -0.019826572, y: -0.011329532, z: 0}
 --- !u!114 &228399535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17734,7 +17734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b57db620f41e6f44b292321300f8e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _AttackController: {fileID: 0}
+  _combateScottie: {fileID: 228399535}
   dir: 0
 --- !u!212 &1345503354
 SpriteRenderer:
