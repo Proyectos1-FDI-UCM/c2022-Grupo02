@@ -4,34 +4,48 @@ using UnityEngine;
 
 public class AttackController : MonoBehaviour
 {
-    #region parameters
-    [SerializeField]
-    private float firerate = 0.5f;
-    [SerializeField]
-    private float canfire = 0.0f;
-    [SerializeField]
-    private float ShotSpeed = 0.0f;
-    #endregion
+    public Transform rangoAtaque;
+    private LayerMask enemyLayers;
 
-    #region references
-    [SerializeField]
-    private GameObject myShot;
-    public Transform shoopos;
-    #endregion
 
-    #region methods
-    public void Shoot(int dir)
+    private float distanciaAtaque = 0.8f;
+    int damage = 1;
+    bool ataque = false;
+    float cronoVox;
+
+
+    void Update()
     {
-        if (Time.time > canfire)
+        Debug.Log(ataque);
+        cronoVox += Time.deltaTime;
+        if(cronoVox > 0.5f)
         {
-            GameObject newshoot = Instantiate(myShot, shoopos.position, Quaternion.identity); //disparar
-            newshoot.GetComponent<Rigidbody>().velocity = new Vector3(ShotSpeed * dir * Time.fixedDeltaTime, 0f);
-            if (dir < 0)
-            {
-                newshoot.GetComponent<SpriteRenderer>().flipX = true;// rotacion de sprite del disparo
-            }
-            canfire = Time.time + firerate;//indica la cadencia del tiro
+            ataque = false;
+            cronoVox = 0;
         }
     }
-    #endregion
+    
+    void OnDrawGizmosSelected()
+    {
+        if (rangoAtaque == null)
+            return;
+
+        Gizmos.DrawWireSphere(rangoAtaque.position, distanciaAtaque);
+
+    }
+
+    private void OnTriggerEnter(Collider collision)
+    {
+        if (ataque)
+        {
+            Collider2D[] hitEnemy = Physics2D.OverlapCircleAll(rangoAtaque.position, distanciaAtaque, enemyLayers);
+            EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
+            if (enemy != null)enemy.Damage(damage);
+        }
+    }
+
+    public void cambiabooleano()
+    {
+        ataque = true;
+    }
 }
