@@ -8,7 +8,7 @@ public class combateScottie : MonoBehaviour
     private LayerMask enemyLayers;
 
 
-    private float distanciaAtaque = 0.8f;
+    private float distanciaAtaque = 1f;
     int damage = 1;
     bool ataque = false;
     float cronoVox;
