@@ -1,15 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
 {
-
+    #region references
+    [SerializeField]
+    private GameObject _pauseMenu; // Objeto que contiene el menú de pausa
+    [SerializeField]
+    private GameObject _continueButton; // Botón de continue
+    [SerializeField]
+    private GameObject _controlsButton; // Botón de controles
+    [SerializeField]
+    private GameObject _quitButton; // Botón de quit
+    #endregion
     #region parameters
     [SerializeField]
     private GameObject[] hearts;
     [SerializeField]
-    private int _inicialHealth;
+    public int _inicialHealth;
     #endregion
 
     #region methods
@@ -23,20 +33,27 @@ public class UI_Manager : MonoBehaviour
         {
             hearts[i].SetActive(false);
         }
-        //Debug.Log("Buenas tardes");
+    }
+
+    public void SetPauseMenu(bool enabled)
+    {
+       _pauseMenu.SetActive(enabled);
+    }
+
+    public void ContinueGame()
+    {
+        SetPauseMenu(false);
+        GameManager.Instance.ContinueGame();
+    }
+
+    public void SetControlsMenu()
+    {
+        Debug.Log("Controles");
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quit");
+        GameManager.Instance.Quit(); 
     }
     #endregion
-
-
-
-
-    void Start()
-    {
-        UpdatePlayerLife(_inicialHealth);
-    }
-
-    void Update()
-    {
-        
-    }
 }

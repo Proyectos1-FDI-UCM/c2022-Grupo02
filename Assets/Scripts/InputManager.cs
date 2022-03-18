@@ -17,7 +17,7 @@ public class InputManager : MonoBehaviour
 
     #region parameters
     public int dir;
-    private float change = 0;
+    private float change = 6;
     #endregion
 
 
@@ -66,13 +66,12 @@ public class InputManager : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
         }
-        if(Input.GetKeyDown(KeyCode.P))
+
+        if (Input.GetKeyDown(KeyCode.P))
         {
-            PlayerPrefs.SetInt("Magia",/*variable magia*/1);
-            PlayerPrefs.SetInt("Salto",/*variable Salto doble*/1);
-            PlayerPrefs.SetInt("Vida",/*variable Vida maxima*/1);
-            PlayerPrefs.SetInt("Scena",/*variable Vida nivel*/0);
+            GameManager.Instance.SetPause();
         }
+
         if (Time.time >= change)// cambiar los booleanos a false tras un tiempo
         {
             gameObject.GetComponent<Animator>().SetBool("Adistancia", false);
