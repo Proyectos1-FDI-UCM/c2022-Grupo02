@@ -33,7 +33,6 @@ public class UI_Manager : MonoBehaviour
         {
             hearts[i].SetActive(false);
         }
-        //Debug.Log("Buenas tardes");
     }
 
     public void SetPauseMenu(bool enabled)
@@ -49,11 +48,11 @@ public class UI_Manager : MonoBehaviour
 
     public void SetControlsMenu()
     {
-        Debug.Log("controles");
+        Debug.Log("Controles");
     }
     public void QuitGame()
     {
-        Debug.Log("quit");
+        Debug.Log("Quit");
         GameManager.Instance.Quit(); 
     }
     #endregion

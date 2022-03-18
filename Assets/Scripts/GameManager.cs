@@ -28,16 +28,27 @@ public class GameManager : MonoBehaviour
     public void SetPause()
     {
         _myUIManager.SetPauseMenu(true);
+        _myPlayer.SetActive(false);
         Time.timeScale = 0.0f;
     }
 
     public void ContinueGame()
     {
+        _myPlayer.SetActive(true);
         Time.timeScale = 1.0f;
+    }
+
+    private void SaveGameStatus()
+    {
+        PlayerPrefs.SetInt("Magia",/*variable magia*/1);
+        PlayerPrefs.SetInt("Salto",/*variable Salto doble*/1);
+        PlayerPrefs.SetInt("Vida",/*variable Vida maxima*/1);
+        PlayerPrefs.SetInt("Scena",/*variable Vida nivel*/0);
     }
 
     public void Quit()
     {
+        SaveGameStatus();
         Application.Quit();
     }
     #endregion
@@ -53,11 +64,5 @@ public class GameManager : MonoBehaviour
         _myUIManager = GameObject.Find("UI").GetComponent<UI_Manager>();
         _myPlayer = GameObject.Find("Scottie");
         _myUIManager.UpdatePlayerLife(_myUIManager._inicialHealth);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
