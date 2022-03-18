@@ -9,6 +9,7 @@ public class JumpController : MonoBehaviour
     float _gravity = 9.8f;
     [SerializeField]
     float _jumpSpeed = 0f;
+    [SerializeField]
     Vector3 velocity;
     #endregion
 
