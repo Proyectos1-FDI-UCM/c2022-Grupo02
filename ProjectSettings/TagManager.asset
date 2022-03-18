@@ -7,6 +7,7 @@ TagManager:
   - Shot
   - Bloque Destructible
   - Enemy
+  - Espada
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Player
   - Shot
   - Planta Carnivora
-  - 
+  - Espada
   - 
   - 
   - 

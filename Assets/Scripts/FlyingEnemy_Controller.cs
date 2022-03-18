@@ -10,7 +10,6 @@ public class FlyingEnemy_Controller : MonoBehaviour
     private float change;
     [SerializeField]
     private int damagetoplayer = 1;
-
     [SerializeField]
     private float _range;
     #endregion
