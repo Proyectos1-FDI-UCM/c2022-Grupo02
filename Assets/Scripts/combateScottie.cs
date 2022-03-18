@@ -24,14 +24,7 @@ public class combateScottie : MonoBehaviour
         }
     }
     
-    void OnDrawGizmosSelected()
-    {
-        if (rangoAtaque == null)
-            return;
-
-        Gizmos.DrawWireSphere(rangoAtaque.position, distanciaAtaque);
-
-    }
+ 
 
     private void OnTriggerEnter(Collider collision)
     {
