@@ -35,6 +35,7 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+
     public void SetPauseMenu(bool enabled)
     {
        _pauseMenu.SetActive(enabled);
@@ -56,4 +57,11 @@ public class UI_Manager : MonoBehaviour
         GameManager.Instance.Quit(); 
     }
     #endregion
+
+    void Start()
+    {
+        UpdatePlayerLife(_inicialHealth);
+    }
+
+
 }

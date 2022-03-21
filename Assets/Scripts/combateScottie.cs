@@ -9,7 +9,7 @@ public class combateScottie : MonoBehaviour
 
 
     private float distanciaAtaque = 1f;
-    int damage = 1;
+    int damage = 0;
     bool ataque = false;
     float cronoVox;
 
@@ -32,12 +32,18 @@ public class combateScottie : MonoBehaviour
         {
             Collider2D[] hitEnemy = Physics2D.OverlapCircleAll(rangoAtaque.position, distanciaAtaque, enemyLayers);
             EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
-            if (enemy != null)enemy.Damage(damage);
+            
+            if (enemy != null)
+            {
+                //enemy.Damage(damage);
+                Debug.Log(enemy);
+            }
+               
         }
     }
 
     public void cambiabooleano()
     {
         ataque = true;
-    }
+    } 
 }

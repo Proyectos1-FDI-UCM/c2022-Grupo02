@@ -11,7 +11,7 @@ public class InputManager : MonoBehaviour
     private Transform _myTransform;
     private JumpController _jumpController;
     private AttackController _AttackController;
-    [SerializeField]
+    //[SerializeField]
     private combateScottie _combateScottie;
     #endregion
 
@@ -28,6 +28,7 @@ public class InputManager : MonoBehaviour
         _myTransform = GetComponent<Transform>();
         _jumpController = GetComponent<JumpController>();
         _AttackController = GetComponent<AttackController>();
+        _combateScottie = GetComponent<combateScottie>();
         dir = +1;
     }
 

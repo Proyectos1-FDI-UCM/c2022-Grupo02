@@ -3402,7 +3402,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 228399533}
-  - component: {fileID: 228399535}
   - component: {fileID: 228399534}
   m_Layer: 7
   m_Name: rangoAtaque
@@ -3438,19 +3437,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.43009824, y: 0.33763194, z: 1}
   m_Center: {x: -0.18103632, y: -0.01308763, z: 0}
---- !u!114 &228399535
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228399532}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00e4db219700ad64ea814931f9d4b7b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rangoAtaque: {fileID: 228399533}
 --- !u!1001 &234897487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17997,6 +17983,7 @@ GameObject:
   - component: {fileID: 1345503349}
   - component: {fileID: 1345503348}
   - component: {fileID: 1345503356}
+  - component: {fileID: 1345503357}
   m_Layer: 7
   m_Name: Scottie
   m_TagString: Player
@@ -18111,7 +18098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b57db620f41e6f44b292321300f8e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _combateScottie: {fileID: 228399535}
   dir: 0
 --- !u!212 &1345503354
 SpriteRenderer:
@@ -18198,6 +18184,19 @@ MonoBehaviour:
   ShotSpeed: 1200
   myShot: {fileID: 5984260381896386904, guid: f0e97b0c9e3c88c79ba8cd30282bb4fa, type: 3}
   shoopos: {fileID: 694340529}
+--- !u!114 &1345503357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345503346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e4db219700ad64ea814931f9d4b7b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rangoAtaque: {fileID: 228399533}
 --- !u!4 &1349948419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6603310968814865291, guid: 59ed4e924319aa14791f31e97c0dc683, type: 3}

@@ -27,7 +27,8 @@ public class Player_Life_Component : MonoBehaviour
     {
         //Debug.Log(_myUIManager == null);
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
-        health -= damage;
+        //health -= damage;
+        //Esto es lo que se llama desde el evento de la animación
         if (health <= 0)
         {
             gameObject.GetComponent<Animator>().SetBool("Death", true);
