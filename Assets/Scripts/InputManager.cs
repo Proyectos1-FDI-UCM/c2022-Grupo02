@@ -18,6 +18,8 @@ public class InputManager : MonoBehaviour
     #region parameters
     public int dir;
     private float change = 6;
+    private int magia = 1;
+    private int vida = 1;
     #endregion
 
 
@@ -60,9 +62,10 @@ public class InputManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
         {
             _jumpController.Jump();
+
         }
 
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) && magia == 1)
         {
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
