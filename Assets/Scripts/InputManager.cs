@@ -90,7 +90,7 @@ public class InputManager : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Adistancia", false);
             gameObject.GetComponent<Animator>().SetBool("Melé", false);
             change = 0; 
-        } //revisar, no tiene mucho sentido
+        } 
         _myCharacterMovementController.SetDirection(movementDirection);
     }
 
