@@ -11,8 +11,6 @@ public class JumpController : MonoBehaviour
     float _jumpSpeed = 0f;
     [SerializeField]
     Vector3 velocity;
-    private int salto = 1;
-    private bool uno = true;
     #endregion
 
     #region properties
@@ -32,13 +30,6 @@ public class JumpController : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Walk", false);
             velocity.y = _jumpSpeed;
         }
-        if (!_myCharacterController.isGrounded && salto == 1 && uno)
-        {
-            gameObject.GetComponent<Animator>().SetBool("StartJumping", true);
-            gameObject.GetComponent<Animator>().SetBool("Walk", false);
-            velocity.y = _jumpSpeed;
-            uno = false;
-        }
     }
 
     public Vector3 SetGravity()
@@ -52,7 +43,6 @@ public class JumpController : MonoBehaviour
         else
         {
             _gravitySpeed = 0;
-            uno = true;
             //Debug.Log("estoy en el suelo");
         }
         return velocity;
