@@ -11,6 +11,9 @@ public class Player_Life_Component : MonoBehaviour
     [SerializeField]
     private int health = 3;
     private float change = 0;
+    private float _damageChrono = 10;
+    [SerializeField]
+    private float _timeToRecieveDamage;
     #endregion
 
     #region properties
@@ -27,9 +30,19 @@ public class Player_Life_Component : MonoBehaviour
     {
         //Debug.Log(_myUIManager == null);
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
-        //health -= damage;
-        //Esto es lo que se llama desde el evento de la animación
-        if (health <= 0)
+
+        if (_damageChrono > _timeToRecieveDamage) 
+        {
+            health -= damage; //Esto es lo que se llama desde el evento de la animación
+            _damageChrono = 0;
+        }
+
+        if (health < 0)
+        {
+            health = 0;
+        }
+        
+        if (health == 0)
         {
             gameObject.GetComponent<Animator>().SetBool("Death", true);
         }
@@ -51,6 +64,7 @@ public class Player_Life_Component : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Hit", false);
             change = Time.time + 0.5f;
         }
+        _damageChrono += Time.deltaTime;
     }
 
         

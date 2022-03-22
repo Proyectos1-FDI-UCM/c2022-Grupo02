@@ -11,8 +11,7 @@ public class InputManager : MonoBehaviour
     private Transform _myTransform;
     private JumpController _jumpController;
     private AttackController _AttackController;
-    //[SerializeField]
-    private combateScottie _combateScottie;
+    private MeleAttack _myMeleAttack;
     #endregion
 
     #region parameters
@@ -28,12 +27,14 @@ public class InputManager : MonoBehaviour
         _myTransform = GetComponent<Transform>();
         _jumpController = GetComponent<JumpController>();
         _AttackController = GetComponent<AttackController>();
-        _combateScottie = GetComponent<combateScottie>();
+        _myMeleAttack = GameObject.Find("AtDer").GetComponent<MeleAttack>();
+
         dir = +1;
     }
 
     void Update()
     {
+        change += Time.deltaTime;
         Vector3 movementDirection = Vector3.zero;
         if (Input.GetKey(KeyCode.A))
         {
@@ -51,10 +52,10 @@ public class InputManager : MonoBehaviour
             dir = +1;
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetMouseButtonDown(0))
         {
             gameObject.GetComponent<Animator>().SetBool("Melé", true);
-            _combateScottie.cambiabooleano();
+            _myMeleAttack.Attack(dir);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
@@ -62,7 +63,7 @@ public class InputManager : MonoBehaviour
             _jumpController.Jump();
         }
 
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButtonDown(1))
         {
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
@@ -73,12 +74,12 @@ public class InputManager : MonoBehaviour
             GameManager.Instance.SetPause();
         }
 
-        if (Time.time >= change)// cambiar los booleanos a false tras un tiempo
+        if (change >= 0.3f)// cambiar los booleanos a false tras un tiempo
         {
             gameObject.GetComponent<Animator>().SetBool("Adistancia", false);
             gameObject.GetComponent<Animator>().SetBool("Melé", false);
-            change = Time.time + 0.25f;
-        }
+            change = 0; 
+        } //revisar, no tiene mucho sentido
         _myCharacterMovementController.SetDirection(movementDirection);
     }
 

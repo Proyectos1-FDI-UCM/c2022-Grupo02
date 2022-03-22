@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+
     #region references
     static private GameManager _instance;
     static public GameManager Instance
@@ -63,6 +64,6 @@ public class GameManager : MonoBehaviour
     {
         _myUIManager = GameObject.Find("UI").GetComponent<UI_Manager>();
         _myPlayer = GameObject.Find("Scottie");
-        _myUIManager.UpdatePlayerLife(_myUIManager._inicialHealth);
+        //_myUIManager.UpdatePlayerLife(_myUIManager._inicialHealth);
     }
 }
