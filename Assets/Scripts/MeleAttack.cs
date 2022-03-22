@@ -11,7 +11,7 @@ public class MeleAttack : MonoBehaviour
     private GameObject _myAttackR;
     [SerializeField]
     private GameObject _myAttackU;
-
+    [SerializeField]
     private int _damage = 2;
     float _crono = 1;
     #endregion
@@ -22,11 +22,13 @@ public class MeleAttack : MonoBehaviour
         Debug.Log(up);
         if(up == 1)
         {
+            gameObject.GetComponent<Animator>().SetBool("MeleUp", true);
             _myAttackU.SetActive(true);
 
         }
         else 
         {
+            gameObject.GetComponent<Animator>().SetBool("Melé", true);
             if (_direction == 1)
             {
                 _myAttackR.SetActive(true);
@@ -51,6 +53,13 @@ public class MeleAttack : MonoBehaviour
         }
     }
     #endregion
+
+    void Start()
+    {
+        _myAttackL.SetActive(false);
+        _myAttackR.SetActive(false);
+        _myAttackU.SetActive(false);
+    }
 
     void Update()
     {

@@ -17,7 +17,7 @@ public class ShotCollisionController : MonoBehaviour
     {
         EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
         Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
-        if (enemy != null)
+        if (enemy != null && player == null)
         {
             enemy.Damage(damage);
         }

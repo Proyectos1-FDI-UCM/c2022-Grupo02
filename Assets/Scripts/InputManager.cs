@@ -28,7 +28,7 @@ public class InputManager : MonoBehaviour
         _myTransform = GetComponent<Transform>();
         _jumpController = GetComponent<JumpController>();
         _AttackController = GetComponent<AttackController>();
-        _myMeleAttack = GameObject.Find("AtDer").GetComponent<MeleAttack>();
+        _myMeleAttack = GetComponent<MeleAttack>();
 
         dir = +1;
     }
@@ -56,9 +56,17 @@ public class InputManager : MonoBehaviour
             dir = +1;
         }
 
+        if (Input.GetKey(KeyCode.W))
+        {
+            up = 1;
+        }
+        else
+        {
+            up = 0;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
-            gameObject.GetComponent<Animator>().SetBool("Melé", true);
             _myMeleAttack.Attack(dir, up);
         }
 
@@ -72,14 +80,6 @@ public class InputManager : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
         }
-        if (Input.GetKey(KeyCode.W))
-        {
-            up = 1;
-        }
-        else
-        {
-            up = 0;
-        }
         if (Input.GetKeyDown(KeyCode.P))
         {
             GameManager.Instance.SetPause();
@@ -89,8 +89,9 @@ public class InputManager : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("Adistancia", false);
             gameObject.GetComponent<Animator>().SetBool("Melé", false);
+            gameObject.GetComponent<Animator>().SetBool("MeleUp", false);
             change = 0; 
-        } //revisar, no tiene mucho sentido
+        } 
         _myCharacterMovementController.SetDirection(movementDirection);
     }
 
