@@ -3437,6 +3437,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
+<<<<<<< HEAD
   m_Size: {x: 0.38927063, y: 0.33763194, z: 1}
   m_Center: {x: 0.1798254, y: -0.01308763, z: 0}
 --- !u!114 &228399535
@@ -3453,6 +3454,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _myAttackL: {fileID: 1680143401}
   _myAttackR: {fileID: 228399532}
+=======
+  m_Size: {x: 0.37081498, y: 0.33763194, z: 1}
+  m_Center: {x: -0.1513947, y: -0.01308763, z: 0}
+>>>>>>> 66882df4b8659f62732d11eac6cd3cef914ba581
 --- !u!1001 &234897487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18175,7 +18180,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345503346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -18.2, y: -3.2, z: 0}
+=======
+  m_LocalPosition: {x: -17.5, y: -0.5, z: 0}
+>>>>>>> 66882df4b8659f62732d11eac6cd3cef914ba581
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 694340529}
@@ -27989,7 +27998,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7692565304247762493, guid: c013a4adf26b95a49b22e2c8f79c48e6, type: 3}
       propertyPath: positions.Array.data[1].x
-      value: 107
+      value: 109
       objectReference: {fileID: 0}
     - target: {fileID: 7692565304247762493, guid: c013a4adf26b95a49b22e2c8f79c48e6, type: 3}
       propertyPath: positions.Array.data[1].y
@@ -28526,6 +28535,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2022264296}
     m_Modifications:
+    - target: {fileID: 4650450660159816838, guid: 66bc202847097da47b7bba22293807e1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5301678022150726531, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -28592,7 +28605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7796653991983665558, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1391739390055983984, guid: 66bc202847097da47b7bba22293807e1, type: 3}

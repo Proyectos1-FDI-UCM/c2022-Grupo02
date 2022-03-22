@@ -17,21 +17,10 @@ public class EstaticEnemy_Controller : MonoBehaviour
     #endregion
 
     #region methods
-    public void Choose()
+    private void Choose()
     {
         if (_Scottie.transform.position.x > _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatLeft", true); }// animación de comer izquierda
         else if (_Scottie.transform.position.x < _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatRight", true); }// animación de comer derecha
-    }
-    #endregion
-
-    void Update()
-    {
-        if(Time.time >= change)// cambiar los booleanos a false tras un tiempo
-        {
-            gameObject.GetComponent<Animator>().SetBool("EatRight", false);
-            gameObject.GetComponent<Animator>().SetBool("EatLeft", false);
-            change = Time.time + 0.5f;
-        }
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -45,9 +34,22 @@ public class EstaticEnemy_Controller : MonoBehaviour
         }
     }
 
+    #endregion
+
     void Start()
     {
         _myTransform = GetComponent<Transform>();
         _Scottie = GameObject.Find("Scottie");
     }
+
+    void Update()
+    {
+        if(Time.time >= change)// cambiar los booleanos a false tras un tiempo
+        {
+            gameObject.GetComponent<Animator>().SetBool("EatRight", false);
+            gameObject.GetComponent<Animator>().SetBool("EatLeft", false);
+            change = Time.time + 0.5f;
+        }
+    }
+
 }

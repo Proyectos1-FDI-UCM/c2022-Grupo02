@@ -23,6 +23,7 @@ public class Player_Life_Component : MonoBehaviour
     #region references
     [SerializeField]
     private UI_Manager _myUIManager;
+    CharacterController _myCharacterController;
     #endregion
 
     #region methods
@@ -30,6 +31,7 @@ public class Player_Life_Component : MonoBehaviour
     {
         //Debug.Log(_myUIManager == null);
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
+<<<<<<< HEAD
 
         if (_damageChrono > _timeToRecieveDamage) 
         {
@@ -46,6 +48,11 @@ public class Player_Life_Component : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("Death", true);
         }
+=======
+        health -= damage;
+        //Esto es lo que se llama desde el evento de la animación
+
+>>>>>>> 66882df4b8659f62732d11eac6cd3cef914ba581
         _myUIManager.UpdatePlayerLife(health);
 
     }
@@ -55,6 +62,7 @@ public class Player_Life_Component : MonoBehaviour
     {
         _currentLife = _maxLife;
         //_myUIManager = GetComponent<UI_Manager>();
+        _myCharacterController = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -64,7 +72,15 @@ public class Player_Life_Component : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Hit", false);
             change = Time.time + 0.5f;
         }
+<<<<<<< HEAD
         _damageChrono += Time.deltaTime;
+=======
+
+        if (health <= 0 && _myCharacterController.isGrounded)
+        {
+                gameObject.GetComponent<Animator>().SetBool("Death", true);
+        }
+>>>>>>> 66882df4b8659f62732d11eac6cd3cef914ba581
     }
 
         
