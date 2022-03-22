@@ -4,46 +4,67 @@ using UnityEngine;
 
 public class combateScottie : MonoBehaviour
 {
+    #region references
     public Transform rangoAtaque;
     private LayerMask enemyLayers;
+    private EnemyLifeComponent enemy;
+    #endregion
 
-
+    #region parameters
     private float distanciaAtaque = 1f;
-    int damage = 0;
+    int damage = 1;
     bool ataque = false;
-    float cronoVox;
+    float crono;
+    bool rango = false;
+    #endregion
 
-
-    void Update()
+    #region methods
+    private void OnDrawGizmosSelected()
     {
-        cronoVox += Time.deltaTime;
-        if(cronoVox > 2f)
+        if (rangoAtaque != null)
         {
-            ataque = false;
-            cronoVox = 0;
+            Gizmos.DrawWireSphere(rangoAtaque.position, distanciaAtaque);
         }
+
     }
-    
- 
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (ataque)
-        {
-            Collider2D[] hitEnemy = Physics2D.OverlapCircleAll(rangoAtaque.position, distanciaAtaque, enemyLayers);
-            EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
-            
-            if (enemy != null)
-            {
-                //enemy.Damage(damage);
-                Debug.Log(enemy);
-            }
-               
-        }
+        rango = true;
+        enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
+
     }
 
     public void cambiabooleano()
     {
         ataque = true;
-    } 
+        Mele();
+    }
+
+    private void Mele()
+    {
+        if (ataque && rango && (enemy != null))
+        {
+            Debug.Log(enemy);
+            enemy.Damage(damage);
+        }
+    }
+    #endregion
+
+    void Start()
+    {
+        rangoAtaque = GetComponent<Transform>();
+    }
+
+    void Update()
+    {
+        crono += Time.deltaTime;
+        if(crono > 2f)
+        {
+            ataque = false;
+            crono = 0;
+        }
+    }
+    
+
 }
