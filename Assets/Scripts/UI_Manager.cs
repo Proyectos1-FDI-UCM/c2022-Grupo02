@@ -17,21 +17,23 @@ public class UI_Manager : MonoBehaviour
     #endregion
     #region parameters
     [SerializeField]
-    private GameObject[] hearts;
+    private GameObject[] _hearts;
     [SerializeField]
     public int _inicialHealth;
+    [SerializeField]
+    private int _maximumHealth;
     #endregion
 
     #region methods
-    public void UpdatePlayerLife(int newLife)
+    public void UpdatePlayerLife(int _newHP)
     {
-        for(int i = 0; i < newLife; i++)
+        for(int i = 0; i < _newHP; i++)
         {
-            hearts[i].SetActive(true);
+            _hearts[i].SetActive(true);
         }
-        for (int i = newLife; i < 6 ; i++)
+        for (int i = _newHP; i < _maximumHealth ; i++)
         {
-            hearts[i].SetActive(false);
+            _hearts[i].SetActive(false);
         }
     }
 
