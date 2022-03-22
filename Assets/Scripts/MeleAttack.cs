@@ -9,22 +9,34 @@ public class MeleAttack : MonoBehaviour
     private GameObject _myAttackL;
     [SerializeField]
     private GameObject _myAttackR;
+    [SerializeField]
+    private GameObject _myAttackU;
+
     private int _damage = 2;
     float _crono = 1;
     #endregion
 
     #region methods
-    public void Attack(int _direction)
+    public void Attack(int _direction, int up)
     {
-        if (_direction == 1)
+        Debug.Log(up);
+        if(up == 1)
         {
-            _myAttackR.SetActive(true);
+            _myAttackU.SetActive(true);
+
         }
-        else
+        else 
         {
-            _myAttackL.SetActive(true);
+            if (_direction == 1)
+            {
+                _myAttackR.SetActive(true);
+            }
+            else
+            {
+                _myAttackL.SetActive(true);
+            }
         }
-            
+
         _crono = 0;
     }
 
@@ -48,6 +60,7 @@ public class MeleAttack : MonoBehaviour
             _crono = 0;
             _myAttackL.SetActive(false);
             _myAttackR.SetActive(false);
+            _myAttackU.SetActive(false); 
         }
 
     }

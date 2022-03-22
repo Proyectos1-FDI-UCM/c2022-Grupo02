@@ -17,6 +17,7 @@ public class InputManager : MonoBehaviour
     #region parameters
     public int dir;
     private float change = 6;
+    private int up = 0; 
     #endregion
 
 
@@ -34,10 +35,12 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
+        
         change += Time.deltaTime;
         Vector3 movementDirection = Vector3.zero;
         if (Input.GetKey(KeyCode.A))
         {
+           
             gameObject.GetComponent<Animator>().SetBool("Walk", true);
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
             movementDirection.x = -1.0f;
@@ -46,6 +49,7 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
+           
             gameObject.GetComponent<Animator>().SetBool("Walk", true);
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
             movementDirection.x = 1.0f;
@@ -55,10 +59,10 @@ public class InputManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             gameObject.GetComponent<Animator>().SetBool("Melé", true);
-            _myMeleAttack.Attack(dir);
+            _myMeleAttack.Attack(dir, up);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             _jumpController.Jump();
         }
@@ -68,7 +72,14 @@ public class InputManager : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
         }
-
+        if (Input.GetKey(KeyCode.W))
+        {
+            up = 1;
+        }
+        else
+        {
+            up = 0;
+        }
         if (Input.GetKeyDown(KeyCode.P))
         {
             GameManager.Instance.SetPause();
