@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7692565304247762483}
   - component: {fileID: 8758597800996260399}
   - component: {fileID: 2896153221899701997}
+  - component: {fileID: -3047986554695655603}
   m_Layer: 3
   m_Name: Ground Enemy
   m_TagString: Enemy
@@ -164,3 +165,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 2
+--- !u!114 &-3047986554695655603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229444329646109029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55027a9e88361694da241e376900f290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  probDivBy10: 10
+  Hearth: {fileID: 8959002753527992097, guid: a701486e8ff375b48b5688d7eda5abd5, type: 3}
