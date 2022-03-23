@@ -25,7 +25,6 @@ public class ShotMovementController : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-
     }
     #endregion
 

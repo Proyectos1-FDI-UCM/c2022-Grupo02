@@ -48,7 +48,19 @@ public class Player_Life_Component : MonoBehaviour
             
         }
         _myUIManager.UpdatePlayerLife(health);
+    }
 
+    public void heal(int healValue)
+    {
+        if (health + healValue <= _maxLife)
+        {
+            health += healValue;
+        }
+        else
+        {
+            health = _maxLife;
+        }
+        _myUIManager.UpdatePlayerLife(health);
     }
     #endregion
 
