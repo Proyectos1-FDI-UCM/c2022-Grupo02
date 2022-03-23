@@ -23,6 +23,7 @@ public class Player_Life_Component : MonoBehaviour
     #region references
     [SerializeField]
     private UI_Manager _myUIManager;
+    CharacterController _myCharacterController;
     #endregion
 
     #region methods
@@ -44,7 +45,7 @@ public class Player_Life_Component : MonoBehaviour
         
         if (health == 0)
         {
-            gameObject.GetComponent<Animator>().SetBool("Death", true);
+            
         }
         _myUIManager.UpdatePlayerLife(health);
 
@@ -55,6 +56,7 @@ public class Player_Life_Component : MonoBehaviour
     {
         _currentLife = _maxLife;
         //_myUIManager = GetComponent<UI_Manager>();
+        _myCharacterController = GetComponent<CharacterController>();
     }
 
     void Update()
@@ -65,6 +67,11 @@ public class Player_Life_Component : MonoBehaviour
             change = Time.time + 0.5f;
         }
         _damageChrono += Time.deltaTime;
+
+        if (health == 0 && _myCharacterController.isGrounded)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Death", true);
+        }
     }
 
         

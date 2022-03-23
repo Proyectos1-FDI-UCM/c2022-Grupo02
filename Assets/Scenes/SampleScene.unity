@@ -3404,6 +3404,7 @@ GameObject:
   m_Component:
   - component: {fileID: 228399533}
   - component: {fileID: 228399534}
+  - component: {fileID: 228399535}
   m_Layer: 11
   m_Name: AtDer
   m_TagString: Untagged
@@ -3438,6 +3439,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.38927063, y: 0.33763194, z: 1}
   m_Center: {x: 0.1798254, y: -0.01308763, z: 0}
+--- !u!114 &228399535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 228399532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973d61eda37657744bf632c100998376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 2
 --- !u!1001 &234897487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17980,12 +17994,11 @@ GameObject:
   - component: {fileID: 1345503350}
   - component: {fileID: 1345503351}
   - component: {fileID: 1345503347}
-  - component: {fileID: 1345503353}
   - component: {fileID: 1345503352}
   - component: {fileID: 1345503349}
   - component: {fileID: 1345503348}
   - component: {fileID: 1345503356}
-  - component: {fileID: 1345503357}
+  - component: {fileID: 1345503353}
   m_Layer: 7
   m_Name: Scottie
   m_TagString: Player
@@ -18001,7 +18014,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345503346}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.21624129, y: 0.3737968, z: 0.2}
@@ -18101,6 +18114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b57db620f41e6f44b292321300f8e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _myAttackL: {fileID: 1680143401}
+  _myAttackR: {fileID: 228399532}
+  _myAttackU: {fileID: 2025202576}
   dir: 0
 --- !u!212 &1345503354
 SpriteRenderer:
@@ -18161,7 +18177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345503346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.2, y: -3.2, z: 0}
+  m_LocalPosition: {x: 126.4, y: 13.3, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 694340529}
@@ -18189,22 +18205,6 @@ MonoBehaviour:
   ShotSpeed: 1200
   myShot: {fileID: 5984260381896386904, guid: f0e97b0c9e3c88c79ba8cd30282bb4fa, type: 3}
   shoopos: {fileID: 694340529}
---- !u!114 &1345503357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1345503346}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 973d61eda37657744bf632c100998376, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _myAttackL: {fileID: 1680143401}
-  _myAttackR: {fileID: 228399532}
-  _myAttackU: {fileID: 2025202576}
-  _damage: 2
 --- !u!4 &1349948419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6603310968814865291, guid: 59ed4e924319aa14791f31e97c0dc683, type: 3}
@@ -22429,6 +22429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1680143402}
   - component: {fileID: 1680143404}
+  - component: {fileID: 1680143403}
   m_Layer: 11
   m_Name: AtIzq
   m_TagString: Untagged
@@ -22444,12 +22445,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680143401}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.39000005, y: 0, z: 0}
+  m_LocalPosition: {x: -0.39000067, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345503355}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680143403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680143401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973d61eda37657744bf632c100998376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 2
 --- !u!65 &1680143404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27213,6 +27227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025202577}
   - component: {fileID: 2025202579}
+  - component: {fileID: 2025202578}
   m_Layer: 11
   m_Name: AtArr
   m_TagString: Untagged
@@ -27228,12 +27243,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025202576}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.189, y: 0.311, z: 0}
+  m_LocalPosition: {x: -0.18900046, y: 0.31100005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1345503355}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2025202578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025202576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973d61eda37657744bf632c100998376, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 2
 --- !u!65 &2025202579
 BoxCollider:
   m_ObjectHideFlags: 0

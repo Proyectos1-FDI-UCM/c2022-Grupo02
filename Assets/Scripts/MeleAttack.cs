@@ -6,59 +6,33 @@ public class MeleAttack : MonoBehaviour
 {
     #region paremeters
     [SerializeField]
-    private GameObject _myAttackL;
-    [SerializeField]
-    private GameObject _myAttackR;
-    [SerializeField]
-    private GameObject _myAttackU;
-    [SerializeField]
     private int _damage = 2;
     float _crono = 1;
     #endregion
 
     #region methods
-    public void Attack(int _direction, int up)
+    public void Attack()
     {
-        Debug.Log(up);
-        if(up == 1)
-        {
-            gameObject.GetComponent<Animator>().SetBool("MeleUp", true);
-            _myAttackU.SetActive(true);
-
-        }
-        else 
-        {
-            gameObject.GetComponent<Animator>().SetBool("Melé", true);
-            if (_direction == 1)
-            {
-                _myAttackR.SetActive(true);
-            }
-            else
-            {
-                _myAttackL.SetActive(true);
-            }
-        }
-
+        gameObject.SetActive(true);
         _crono = 0;
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        EnemyLifeComponent _enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
+        EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
 
-        if (_enemy != null)
+        if (enemy != null)
         {
-            _enemy.Damage(_damage);
-            Debug.Log(_enemy);
+            enemy.Damage(_damage);
+            Debug.Log(enemy);
         }
     }
+
     #endregion
 
     void Start()
     {
-        _myAttackL.SetActive(false);
-        _myAttackR.SetActive(false);
-        _myAttackU.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     void Update()
@@ -67,9 +41,8 @@ public class MeleAttack : MonoBehaviour
         if (_crono > 0.3f)
         {
             _crono = 0;
-            _myAttackL.SetActive(false);
-            _myAttackR.SetActive(false);
-            _myAttackU.SetActive(false); 
+            gameObject.SetActive(false);
+            
         }
 
     }

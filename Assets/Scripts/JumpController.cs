@@ -11,6 +11,7 @@ public class JumpController : MonoBehaviour
     float _jumpSpeed = 0f;
     [SerializeField]
     Vector3 velocity;
+    bool _isGroundedPreviousFrame;
     #endregion
 
     #region properties
@@ -65,8 +66,15 @@ public class JumpController : MonoBehaviour
         //Debug.Log(velocity.y);
         if (_myCharacterController.isGrounded)
         {
+            if (_isGroundedPreviousFrame != _myCharacterController.isGrounded)
+            {
+                velocity.y = -15;
+            }
+
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);
         }
+
+        _isGroundedPreviousFrame = _myCharacterController.isGrounded;
     }
 }
 
