@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B757C47C-42C4-9068-C103-F5FE0EB3844F}</ProjectGuid>
+    <ProjectGuid>{EF101DD2-E11D-6D9A-A656-6E4CD7A47961}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -86,6 +86,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\CeilingLimitController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scripts\ContactDamageComponent.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TMP_TextSelector_B.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\EnvMapAnimator.cs" />
@@ -109,6 +110,9 @@
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Player_Life_Component.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TMP_TextEventCheck.cs" />
+    <Compile Include="Assets\Scripts\DesMagia.cs" />
+    <Compile Include="Assets\Scripts\DesSalto.cs" />
+    <Compile Include="Assets\Scripts\DesVida.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

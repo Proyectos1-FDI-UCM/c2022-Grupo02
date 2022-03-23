@@ -73,7 +73,16 @@ public class Player_Life_Component : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Death", true);
         }
     }
-
+    public void DesVida()
+    {
+        health = 6;
+        _myUIManager.UpdatePlayerLife(health);
+    }
+    public void Cura()
+    {
+        health++;
+        _myUIManager.UpdatePlayerLife(health);
+    }
         
  
 }

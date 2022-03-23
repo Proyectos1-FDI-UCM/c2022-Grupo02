@@ -25,7 +25,10 @@ public class InputManager : MonoBehaviour
     #region parameters
     public int dir;
     private float change = 6;
+    private int magia = 0;
+    private int vida = 1;
     private int up = 0;
+    private int salto = 0;
     #endregion
 
     #region methods
@@ -101,10 +104,11 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            _jumpController.Jump();
+            Debug.Log(salto);
+            _jumpController.Jump(salto);
         }
 
-        if(Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1) && magia == 1)
         {
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
@@ -123,5 +127,12 @@ public class InputManager : MonoBehaviour
         } 
         _myCharacterMovementController.SetDirection(movementDirection);
     }
-
+    public void DesSalto()
+    {
+        salto = 1;
+    }
+    public void DesMagia()
+    {
+        magia = 1;
+    }
 }
