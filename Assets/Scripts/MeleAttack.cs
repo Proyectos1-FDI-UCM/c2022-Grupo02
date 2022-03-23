@@ -30,11 +30,6 @@ public class MeleAttack : MonoBehaviour
 
     #endregion
 
-    void Start()
-    {
-        gameObject.SetActive(false);
-    }
-
     void Update()
     {
         _crono += Time.deltaTime;

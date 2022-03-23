@@ -90,22 +90,13 @@ public class InputManager : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             up = 1;
-        }
-        else
-        {
-            up = 0;
+            gameObject.GetComponent<Animator>().SetBool("MeleUp", true);
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (up == 1)
-            {
-                gameObject.GetComponent<Animator>().SetBool("MeleUp", true);
-            }
-            else
-            {
-                gameObject.GetComponent<Animator>().SetBool("Melé", true);
-            }
+            up = 0;
+            gameObject.GetComponent<Animator>().SetBool("Melé", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

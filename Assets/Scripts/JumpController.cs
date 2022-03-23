@@ -68,7 +68,7 @@ public class JumpController : MonoBehaviour
         {
             if (_isGroundedPreviousFrame != _myCharacterController.isGrounded)
             {
-                velocity.y = -15;
+                velocity.y = -20;
             }
 
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);

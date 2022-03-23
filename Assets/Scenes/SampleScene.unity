@@ -14835,7 +14835,7 @@ RectTransform:
   m_GameObject: {fileID: 1050369218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 4.2, z: 1}
+  m_LocalScale: {x: 30, y: 12, z: 1}
   m_Children:
   - {fileID: 502904811}
   - {fileID: 139465950}
@@ -18099,7 +18099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde1f602e8ab8846a6d18ffa6133c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravity: -120
+  _gravity: -130
   _jumpSpeed: 23
   velocity: {x: 0, y: 0, z: 0}
 --- !u!114 &1345503353
@@ -18177,7 +18177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1345503346}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.4, y: 13.3, z: 0}
+  m_LocalPosition: {x: -20.5, y: -3.7, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 694340529}
@@ -27273,8 +27273,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.38927063, y: 0.33763194, z: 1}
-  m_Center: {x: 0.1798254, y: -0.01308763, z: 0}
+  m_Size: {x: 0.31259412, y: 0.34007144, z: 1}
+  m_Center: {x: 0.15852642, y: -0.014307201, z: 0}
 --- !u!4 &2029370376 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8753694480856791670, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
