@@ -4,8 +4,15 @@ using UnityEngine;
 
 public class EnemyLifeComponent : MonoBehaviour
 {
+    #region parameters
     [SerializeField]
     private int health = 1;
+    #endregion
+
+    #region references
+    private Transform _myTransform;
+    private HealthDropComponent _myHealthDropComponent;
+    #endregion
 
     public void Damage(int Damage)
     {
@@ -19,5 +26,16 @@ public class EnemyLifeComponent : MonoBehaviour
     private void Die()
     {
         Destroy(gameObject);
+
+        if (_myHealthDropComponent != null)
+        {
+            _myHealthDropComponent.TryToDrop(_myTransform.position);
+        }
+    }
+
+    private void Start()
+    {
+        _myTransform = GetComponent<Transform>();
+        _myHealthDropComponent = GetComponent<HealthDropComponent>();
     }
 }

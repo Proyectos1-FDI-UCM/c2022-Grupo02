@@ -37,8 +37,6 @@ public class MeleAttack : MonoBehaviour
         {
             _crono = 0;
             gameObject.SetActive(false);
-            
         }
-
     }
 }
