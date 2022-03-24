@@ -14,7 +14,12 @@ public class UI_Manager : MonoBehaviour
     private GameObject _controlsButton; // Botón de controles
     [SerializeField]
     private GameObject _quitButton; // Botón de quit
+    [SerializeField]
+    private GameObject _controlsMenu; // Menú de controles
+    [SerializeField]
+    private GameObject _backButton; // Botón de back (vuelve de controles al menú de pausa)
     #endregion
+
     #region parameters
     [SerializeField]
     private GameObject[] _hearts;
@@ -37,7 +42,6 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
-
     public void SetPauseMenu(bool enabled)
     {
        _pauseMenu.SetActive(enabled);
@@ -51,8 +55,16 @@ public class UI_Manager : MonoBehaviour
 
     public void SetControlsMenu()
     {
-        Debug.Log("Controles");
+        _controlsMenu.SetActive(true);
+        _pauseMenu.SetActive(false);
     }
+
+    public void BackButton()
+    {
+        _controlsMenu.SetActive(false);
+        _pauseMenu.SetActive(true);
+    }
+
     public void QuitGame()
     {
         Debug.Log("Quit");
@@ -64,6 +76,4 @@ public class UI_Manager : MonoBehaviour
     {
         UpdatePlayerLife(_inicialHealth);
     }
-
-
 }
