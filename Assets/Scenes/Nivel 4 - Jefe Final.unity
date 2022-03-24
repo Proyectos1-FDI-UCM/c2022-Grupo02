@@ -185,6 +185,25 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5120366668887914465, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
   m_PrefabInstance: {fileID: 1498644943}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &576163881
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576163880}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49330c6918b12de468ec26898b1ce6e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!136 &576163883
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -346,6 +365,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3128630399754841178, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6beb0743f1340540bdb8c4997089e55, type: 3}
     - target: {fileID: 5120366668887914465, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: m_Name
       value: Boss
