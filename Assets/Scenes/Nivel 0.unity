@@ -23010,7 +23010,7 @@ MonoBehaviour:
   - {fileID: 290464557}
   - {fileID: 155064778}
   - {fileID: 2051954814}
-  _inicialHealth: 5
+  _inicialHealth: 6
   _maximumHealth: 6
 --- !u!4 &1665571824 stripped
 Transform:
