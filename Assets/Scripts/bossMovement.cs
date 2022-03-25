@@ -102,6 +102,7 @@ public class bossMovement : MonoBehaviour
         {   
             _AuxSpeed = speed;
             gameObject.GetComponent<Animator>().SetBool("Ataque", false);
+            gameObject.GetComponent<Animator>().SetBool("Hit", false);
             change = Time.time + 0.5f;
         }
     }

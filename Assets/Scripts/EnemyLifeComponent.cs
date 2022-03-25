@@ -16,6 +16,7 @@ public class EnemyLifeComponent : MonoBehaviour
 
     public void Damage(int Damage)
     {
+        gameObject.GetComponent<Animator>().SetBool("Hit", true);
         health -= Damage;
         if (health <= 0)
         {
