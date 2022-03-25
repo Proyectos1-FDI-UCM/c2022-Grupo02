@@ -16167,7 +16167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followSpeed: 3.5
   yPos: 0
-  _targetTransform: {fileID: 0}
+  _targetTransform: {fileID: 1345503355}
 --- !u!81 &1282254852
 AudioListener:
   m_ObjectHideFlags: 0
@@ -20967,13 +20967,13 @@ MonoBehaviour:
   _controlsMenu: {fileID: 0}
   _backButton: {fileID: 0}
   _hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _inicialHealth: 5
+  - {fileID: 1827009412}
+  - {fileID: 96696075}
+  - {fileID: 616248635}
+  - {fileID: 2066878766}
+  - {fileID: 1986415868}
+  - {fileID: 1588677989}
+  _inicialHealth: 6
   _maximumHealth: 6
 --- !u!4 &1664028833 stripped
 Transform:
