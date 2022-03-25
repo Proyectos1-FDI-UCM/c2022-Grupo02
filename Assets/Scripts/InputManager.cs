@@ -69,7 +69,6 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        
         change += Time.deltaTime;
         Vector3 movementDirection = Vector3.zero;
         if (Input.GetKey(KeyCode.A))

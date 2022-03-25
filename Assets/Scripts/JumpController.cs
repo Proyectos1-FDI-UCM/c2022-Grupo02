@@ -9,10 +9,8 @@ public class JumpController : MonoBehaviour
     float _gravity = 9.8f;
     [SerializeField]
     float _jumpSpeed = 0f;
-    [SerializeField]
     Vector3 velocity;
     private bool uno = true;
-    bool _isGroundedPreviousFrame;
     #endregion
 
     #region properties
@@ -32,20 +30,22 @@ public class JumpController : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Walk", false);
             velocity.y = _jumpSpeed;
         }
-        if (!_myCharacterController.isGrounded && salto == 1 && uno)
+        else if (!_myCharacterController.isGrounded && salto == 1 && uno)
         {
+            _gravitySpeed = 0;
             gameObject.GetComponent<Animator>().SetBool("StartJumping", true);
             gameObject.GetComponent<Animator>().SetBool("Walk", false);
             velocity.y = _jumpSpeed;
             uno = false;
         }
+
     }
 
     public Vector3 SetGravity()
     {
         if (!_myCharacterController.isGrounded)
         {
-            _gravitySpeed -= _gravity * (Time.deltaTime);
+            _gravitySpeed -= _gravity * Time.deltaTime;
             velocity.y -= _gravitySpeed;
             //Debug.Log(velocity.y);
         }
@@ -72,19 +72,10 @@ public class JumpController : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(velocity.y);
         if (_myCharacterController.isGrounded)
         {
-            if (_isGroundedPreviousFrame != _myCharacterController.isGrounded)
-            {
-                velocity.y = -2;
-            }
-
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);
+            velocity.y = 2 * _gravity;
         }
-
-        _isGroundedPreviousFrame = _myCharacterController.isGrounded;
     }
-}
-
-
+} 
