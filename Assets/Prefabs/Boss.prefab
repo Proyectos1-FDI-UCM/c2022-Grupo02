@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2157835554470960510}
   - component: {fileID: 5687224992650460163}
   - component: {fileID: 1635883692227706628}
+  - component: {fileID: -793633691101174193}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
@@ -29,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5120366668887914465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 197.94962, y: 2.5850825, z: -99.91202}
-  m_LocalScale: {x: 10.95, y: 10.25, z: 1}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -100,6 +101,7 @@ MonoBehaviour:
   speed: 0
   damagetoplayer: 2
   positions: []
+  _range: 0
 --- !u!114 &5687224992650460163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,3 +129,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   probDivBy10: 10
   Hearth: {fileID: 8959002753527992097, guid: a701486e8ff375b48b5688d7eda5abd5, type: 3}
+--- !u!95 &-793633691101174193
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120366668887914465}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 49330c6918b12de468ec26898b1ce6e7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
