@@ -80,9 +80,12 @@ public class Player_Life_Component : MonoBehaviour
         }
         _damageChrono += Time.deltaTime;
 
-        if (health == 0 && _myCharacterController.isGrounded)
+        //if (health == 0 && _myCharacterController.isGrounded)
+        if (health == 0)
         {
+
             gameObject.GetComponent<Animator>().SetBool("Death", true);
+            
         }
     }
     public void DesVida()

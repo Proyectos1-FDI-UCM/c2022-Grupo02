@@ -10,9 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5860873190253327431}
   - component: {fileID: 3128630399754841178}
+  - component: {fileID: 2157835554470960510}
+  - component: {fileID: 5687224992650460163}
+  - component: {fileID: 1635883692227706628}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82,3 +85,45 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2157835554470960510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120366668887914465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e07e0c6e768f12c49b1ccf20af6dd121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  damagetoplayer: 2
+  positions: []
+--- !u!114 &5687224992650460163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120366668887914465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf039bf728981f941bee947ab279b9a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+--- !u!114 &1635883692227706628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5120366668887914465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55027a9e88361694da241e376900f290, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  probDivBy10: 10
+  Hearth: {fileID: 8959002753527992097, guid: a701486e8ff375b48b5688d7eda5abd5, type: 3}
