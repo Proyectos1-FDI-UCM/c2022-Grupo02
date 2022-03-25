@@ -172,5 +172,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55027a9e88361694da241e376900f290, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  probDivBy10: 10
+  probDivBy10: 6
   Hearth: {fileID: 8959002753527992097, guid: a701486e8ff375b48b5688d7eda5abd5, type: 3}
