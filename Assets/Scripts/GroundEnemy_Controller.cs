@@ -17,6 +17,7 @@ public class GroundEnemy_Controller : MonoBehaviour
     #endregion
 
     #region references
+    public AudioSource audioSource;
     private Transform _myTransform;
     private GameObject _Scottie;
     #endregion
@@ -39,7 +40,8 @@ public class GroundEnemy_Controller : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Ataque", true);
             _AuxSpeed = 0;
             player.damage(damagetoplayer);
-        }
+            audioSource.Play();
+    }
     }
     #endregion
 

@@ -78,6 +78,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\Scripts\MeleAttack.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark03.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark04.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\ShotMovementController.cs" />
+    <Compile Include="Assets\Scripts\DeathZone.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TeleType.cs" />
@@ -116,8 +118,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\Scripts\Player_Life_Component.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples _ Extras\Scripts\TMP_TextEventCheck.cs" />
-    <Compile Include="Assets\Scripts\SoundManager.cs" />
-    <Compile Include="Assets\Scripts\DeathZone.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
