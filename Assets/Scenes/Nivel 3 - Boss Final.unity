@@ -1605,9 +1605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde1f602e8ab8846a6d18ffa6133c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravity: -7
+  _gravity: -10
   _jumpSpeed: 30
-  velocity: {x: 0, y: 0, z: 0}
 --- !u!65 &1625861023
 BoxCollider:
   m_ObjectHideFlags: 0

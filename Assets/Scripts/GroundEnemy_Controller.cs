@@ -17,7 +17,8 @@ public class GroundEnemy_Controller : MonoBehaviour
     #endregion
 
     #region references
-    public AudioSource audioSource;
+    [SerializeField]
+    private AudioSource audioSource;
     private Transform _myTransform;
     private GameObject _Scottie;
     #endregion
