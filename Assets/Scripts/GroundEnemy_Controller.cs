@@ -41,7 +41,6 @@ public class GroundEnemy_Controller : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Ataque", true);
             _AuxSpeed = 0;
             player.damage(damagetoplayer);
-            audioSource.Play();
     }
     }
     #endregion
