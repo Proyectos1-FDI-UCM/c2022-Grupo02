@@ -28,13 +28,13 @@ public class GameManager : MonoBehaviour
     public void SetPause()
     {
         _myUIManager.SetPauseMenu(true);
-        _myPlayer.SetActive(false);
+        //_myPlayer.SetActive(false);
         Time.timeScale = 0.0f;
     }
 
     public void ContinueGame()
     {
-        _myPlayer.SetActive(true);
+        //_myPlayer.SetActive(true);
         Time.timeScale = 1.0f;
     }
 
