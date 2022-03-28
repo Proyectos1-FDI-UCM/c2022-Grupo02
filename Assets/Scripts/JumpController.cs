@@ -45,7 +45,7 @@ public class JumpController : MonoBehaviour
     {
         if (!_myCharacterController.isGrounded)
         {
-            _gravitySpeed -= _gravity * Time.deltaTime;
+            _gravitySpeed -= _gravity * (Time.deltaTime/2.0f);
             velocity.y -= _gravitySpeed;
             //Debug.Log(velocity.y);
         }

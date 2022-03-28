@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5860652237343870994}
   - component: {fileID: -4427414133002135142}
   - component: {fileID: 2011332274768332029}
+  - component: {fileID: -348106497632037751}
   m_Layer: 3
   m_Name: Bloque Destructible
   m_TagString: Bloque Destructible
@@ -110,3 +111,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+--- !u!95 &-348106497632037751
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050056013097066305}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
