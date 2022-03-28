@@ -51,7 +51,7 @@ public class JumpController : MonoBehaviour
         }
         else
         {
-            _gravitySpeed = 0;
+            _gravitySpeed = 0.05f;
             uno = true;
             //Debug.Log("estoy en el suelo");
         }
@@ -75,7 +75,6 @@ public class JumpController : MonoBehaviour
         if (_myCharacterController.isGrounded)
         {
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);
-            velocity.y = 2 * _gravity;
         }
     }
 } 

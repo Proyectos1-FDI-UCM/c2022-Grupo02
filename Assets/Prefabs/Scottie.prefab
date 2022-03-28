@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gravity: -1
-  _jumpSpeed: 25
+  _jumpSpeed: 30
 --- !u!114 &1107990274229792999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 1107990275393739549}
   - component: {fileID: 1107990275393739523}
   - component: {fileID: 1107990275393739548}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: CeilingLimit
   m_TagString: Shot
   m_Icon: {fileID: 0}
