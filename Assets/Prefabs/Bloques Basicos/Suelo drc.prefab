@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6603310968814865291}
+  - component: {fileID: 96890617094405670}
   m_Layer: 0
   m_Name: Suelo drc
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &96890617094405670
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5470393724881822021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025452424, y: 0.046588585, z: 1}
+  m_Center: {x: 0.00029509864, y: 0.00084179855, z: 0}
 --- !u!1001 &6467030451715057205
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -72,7 +86,8 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7637434922169204847, guid: 361010d3b00a2e64baa5aeda8cff9922, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 361010d3b00a2e64baa5aeda8cff9922, type: 3}
 --- !u!4 &3016529110292118883 stripped
 Transform:
@@ -118,7 +133,8 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8467678736277044253, guid: 8c85d32d42caaa44d9901412b2eb4444, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8c85d32d42caaa44d9901412b2eb4444, type: 3}
 --- !u!4 &2259342274184118469 stripped
 Transform:
@@ -164,7 +180,8 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2772152258188396255, guid: 58e80c8528e155c458a985a5d5432707, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58e80c8528e155c458a985a5d5432707, type: 3}
 --- !u!4 &180104854019229466 stripped
 Transform:
