@@ -485,7 +485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gravity: -1
-  _jumpSpeed: 35
+  _jumpSpeed: 30
 --- !u!114 &1107990274229792999
 MonoBehaviour:
   m_ObjectHideFlags: 0
