@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private UI_Manager _myUIManager;
     private GameObject _myPlayer;
     private InputManager _myInputManager;
+    private Character_MovementController _myCharacterMovementController;
     #endregion
 
     #region methods
@@ -29,15 +30,15 @@ public class GameManager : MonoBehaviour
     public void SetPause()
     {
         _myUIManager.SetPauseMenu(true);
-        //_myPlayer.SetActive(false);
         _myInputManager.enabled = false;
+        _myCharacterMovementController.enabled = false;
         Time.timeScale = 0.0f;
     }
 
     public void ContinueGame()
     {
-        //_myPlayer.SetActive(true);
         _myInputManager.enabled = true;
+        _myCharacterMovementController.enabled = true;
         Time.timeScale = 1.0f;
     }
 
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
         _myUIManager = GameObject.Find("UI").GetComponent<UI_Manager>();
         _myPlayer = GameObject.Find("Scottie");
         _myInputManager = _myPlayer.GetComponent<InputManager>();
+        _myCharacterMovementController = _myPlayer.GetComponent<Character_MovementController>();
         //_myUIManager.UpdatePlayerLife(_myUIManager._inicialHealth);
     }
 }

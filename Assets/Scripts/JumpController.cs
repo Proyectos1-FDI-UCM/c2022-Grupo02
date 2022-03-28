@@ -51,7 +51,7 @@ public class JumpController : MonoBehaviour
         }
         else
         {
-            _gravitySpeed = 0;
+            _gravitySpeed = 0.1f;
             uno = true;
             //Debug.Log("estoy en el suelo");
         }

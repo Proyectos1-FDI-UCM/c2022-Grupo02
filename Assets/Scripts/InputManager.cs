@@ -112,7 +112,7 @@ public class InputManager : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Adistancia", true);
             _AttackController.Shoot(dir);
         }
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             GameManager.Instance.SetPause();
         }

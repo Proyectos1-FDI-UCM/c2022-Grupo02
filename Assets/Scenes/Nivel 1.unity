@@ -285,6 +285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloque Destructible
       objectReference: {fileID: 0}
+    - target: {fileID: 2050056013097066305, guid: 712cf9b27b4e205409cd468224475599, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 712cf9b27b4e205409cd468224475599, type: 3}
 --- !u!4 &15820781 stripped
@@ -12040,6 +12044,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1107990275393739550, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
 --- !u!1001 &644640534
@@ -17024,22 +17032,22 @@ Transform:
   - {fileID: 459416007}
   - {fileID: 1046996062}
   - {fileID: 38322532}
-  - {fileID: 94337064}
   - {fileID: 1481159868}
   - {fileID: 1394647838}
-  - {fileID: 398808785}
   - {fileID: 1226583769}
   - {fileID: 2104295985}
+  - {fileID: 854533452}
   - {fileID: 1557662921}
   - {fileID: 2089904861}
   - {fileID: 416756640}
   - {fileID: 1386090872}
+  - {fileID: 94337064}
   - {fileID: 2084714505}
-  - {fileID: 854533452}
+  - {fileID: 398808785}
   - {fileID: 1144470818}
   - {fileID: 1401352740}
-  - {fileID: 277824271}
   - {fileID: 1437200015}
+  - {fileID: 277824271}
   - {fileID: 741108927}
   - {fileID: 732604317}
   m_Father: {fileID: 0}
