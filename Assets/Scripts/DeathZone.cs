@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeathZone : MonoBehaviour
 {
     [SerializeField]
-    int damageToPlayer = 6;
+    int muerteInstanntanea = 6;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -15,7 +15,7 @@ public class DeathZone : MonoBehaviour
         if (player != null)
         {
             //Debug.Log("Detecta");
-            player.damage(damageToPlayer);
+            player.damage(muerteInstanntanea);
         }
     }
 }

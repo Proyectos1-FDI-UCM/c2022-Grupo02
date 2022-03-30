@@ -1208,7 +1208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &110139923
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2466,7 +2466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &179125223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2538,7 +2538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &179661343
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3801,7 +3801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &258645261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4733,7 +4733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &316154207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5230,7 +5230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &357802295
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5988,7 +5988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &425728131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6603310968814865291, guid: 59ed4e924319aa14791f31e97c0dc683, type: 3}
@@ -7065,7 +7065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &498626684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10296,7 +10296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &680004098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6751353817887940405, guid: a615d925b7798034d814adae50f16be4, type: 3}
@@ -10319,7 +10319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &687827451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10942,7 +10942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &716709710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6603310968814865291, guid: 59ed4e924319aa14791f31e97c0dc683, type: 3}
@@ -14874,7 +14874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &967637092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6751353817887940405, guid: a615d925b7798034d814adae50f16be4, type: 3}
@@ -15433,7 +15433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &1005576139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16986,7 +16986,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &1137837467 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7897420435035433418, guid: 998ac33b3e4e9f3488465e03d90c7f50, type: 3}
@@ -17393,7 +17393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &1163268236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18080,7 +18080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &1203101649 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3100857485386754558, guid: 7ab30d2230924d44fb7574c312f7aa28, type: 3}
@@ -19011,7 +19011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &1309554118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8753694480856791670, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
@@ -21800,7 +21800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &1484533498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22940,7 +22940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &1577062166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23130,107 +23130,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7632a6483586b394e802742be708f9bd, type: 3}
---- !u!1 &1584756601 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2301703375029743578, guid: 325d72d755a9f364e96c1151ff04fb80, type: 3}
-  m_PrefabInstance: {fileID: 2301703373871682481}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1584756606
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584756601}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 924caf09027a3cc49916012d357b862d, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.164
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &1598682128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6751353817887940405, guid: a615d925b7798034d814adae50f16be4, type: 3}
@@ -26202,7 +26101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &1802637144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8728184225952358735, guid: 7632a6483586b394e802742be708f9bd, type: 3}
@@ -27122,7 +27021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &1866791364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27287,7 +27186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1001 &1889000936
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27408,7 +27307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &1910222065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8728184225952358735, guid: 7632a6483586b394e802742be708f9bd, type: 3}
@@ -27563,7 +27462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &1919672189 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8728184225952358735, guid: 7632a6483586b394e802742be708f9bd, type: 3}
@@ -29571,7 +29470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &2040790064 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8728184225952358735, guid: 7632a6483586b394e802742be708f9bd, type: 3}
@@ -29594,7 +29493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1 &2051954814
 GameObject:
   m_ObjectHideFlags: 0
@@ -29763,7 +29662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!1 &2072099134
 GameObject:
   m_ObjectHideFlags: 0
@@ -30287,7 +30186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageToPlayer: 6
+  muerteInstanntanea: 6
 --- !u!4 &2084843934 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8753694480856791670, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
@@ -31332,7 +31231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1107990274229793002, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: _gravity
-      value: -0.5
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1107990274229793002, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: _jumpSpeed
