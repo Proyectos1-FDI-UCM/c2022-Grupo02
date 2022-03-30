@@ -48,6 +48,13 @@ public class GameManager : MonoBehaviour
         _myInputManager.enabled = false;
     }
 
+    public void FinJuego()
+    {
+        //desactivar a Scottie 
+        //Activar el texto de la puntuación
+        //Activar el texto de Fin de Juego
+    }
+
     private void SaveGameStatus()
     {
         PlayerPrefs.SetInt("Magia",/*variable magia*/1);
