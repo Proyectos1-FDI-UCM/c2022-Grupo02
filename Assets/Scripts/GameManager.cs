@@ -42,6 +42,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1.0f;
     }
 
+    public void Death()
+    {
+        _myCharacterMovementController.enabled = false;
+        _myInputManager.enabled = false;
+    }
+
     private void SaveGameStatus()
     {
         PlayerPrefs.SetInt("Magia",/*variable magia*/1);

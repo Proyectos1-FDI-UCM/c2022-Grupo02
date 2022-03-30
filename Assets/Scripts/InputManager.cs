@@ -11,15 +11,6 @@ public class InputManager : MonoBehaviour
     private Transform _myTransform;
     private JumpController _jumpController;
     private AttackController _AttackController;
-    [SerializeField]
-    private GameObject _myAttackL;
-    [SerializeField]
-    private GameObject _myAttackR;
-    [SerializeField]
-    private GameObject _myAttackU;
-    private MeleAttack _myMeleAttackL;
-    private MeleAttack _myMeleAttackR;
-    private MeleAttack _myMeleAttackU;
     #endregion
 
     #region parameters
@@ -27,31 +18,10 @@ public class InputManager : MonoBehaviour
     private float change = 6;
     private int magia = 0;
     private int vida = 1;
-    private int up = 0;
+    public int up = 0;
     private int salto = 0;
     #endregion
 
-    #region methods
-    private void LlamaMele()
-    {
-        if (up == 1) 
-        {
-            _myMeleAttackU.Attack();
-        }
-        else
-        {
-            if (dir == 1)
-            {
-                _myMeleAttackR.Attack();
-            }
-            else
-            {
-                _myMeleAttackL.Attack();
-            }
-        }
-        
-    }
-    #endregion
 
     void Start()
     {
@@ -60,10 +30,6 @@ public class InputManager : MonoBehaviour
         _myTransform = GetComponent<Transform>();
         _jumpController = GetComponent<JumpController>();
         _AttackController = GetComponent<AttackController>();
-        _myMeleAttackL = _myAttackL.GetComponent<MeleAttack>();
-        _myMeleAttackR = _myAttackR.GetComponent<MeleAttack>();
-        _myMeleAttackU = _myAttackU.GetComponent<MeleAttack>();
-
         dir = +1;
     }
 

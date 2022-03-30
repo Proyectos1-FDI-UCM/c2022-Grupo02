@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fde1f602e8ab8846a6d18ffa6133c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gravity: -10
+  _gravity: -0.5
   _jumpSpeed: 30
 --- !u!114 &1107990274229792999
 MonoBehaviour:
@@ -546,10 +546,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b57db620f41e6f44b292321300f8e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _myAttackL: {fileID: 1107990273358283963}
-  _myAttackR: {fileID: 1107990275128699198}
-  _myAttackU: {fileID: 1107990273835209474}
   dir: 0
+  up: 0
 --- !u!1 &1107990274654468898
 GameObject:
   m_ObjectHideFlags: 0
