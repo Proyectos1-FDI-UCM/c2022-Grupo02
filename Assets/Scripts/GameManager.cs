@@ -21,10 +21,6 @@ public class GameManager : MonoBehaviour
     private Character_MovementController _myCharacterMovementController;
     #endregion
 
-    #region parameters 
-    float timeToDeadScreen = 100f;
-    #endregion
-
     #region methods
     public void StartGame()
     {
@@ -34,21 +30,22 @@ public class GameManager : MonoBehaviour
     public void SetPause()
     {
         _myUIManager.SetPauseMenu(true);
-        playerMovementActive(false);
+        _myInputManager.enabled = false;
+        _myCharacterMovementController.enabled = false;
         Time.timeScale = 0.0f;
     }
 
     public void ContinueGame()
     {
-        playerMovementActive(true);
+        _myInputManager.enabled = true;
+        _myCharacterMovementController.enabled = true;
         Time.timeScale = 1.0f;
     }
 
-    public void OnPlayerDies()
+    public void Death()
     {
-        playerMovementActive(false);
-
-        _myUIManager.SetDeadScreen(true);
+        _myCharacterMovementController.enabled = false;
+        _myInputManager.enabled = false;
     }
 
     public void FinJuego()
@@ -66,25 +63,14 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Scena",/*variable Vida nivel*/0);
     }
 
-    public void Retry()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
-
     public void Quit()
     {
         SaveGameStatus();
         Application.Quit();
     }
-
-    private void playerMovementActive(bool enabled)
-    {
-        _myCharacterMovementController.enabled = enabled;
-        _myInputManager.enabled = enabled;
-    }
     #endregion
 
-    void Awake()
+    private void Awake()
     {
         _instance = this;
     }

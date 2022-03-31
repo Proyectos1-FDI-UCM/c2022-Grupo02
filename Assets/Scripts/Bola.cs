@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bossUpAttack : MonoBehaviour
+public class Bola : MonoBehaviour
 {
     #region parameters
     [SerializeField]
