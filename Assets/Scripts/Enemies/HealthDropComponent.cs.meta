@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 55027a9e88361694da241e376900f290
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Hearth: {fileID: 8959002753527992097, guid: a701486e8ff375b48b5688d7eda5abd5, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
