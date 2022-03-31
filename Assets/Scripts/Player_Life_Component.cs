@@ -38,17 +38,15 @@ public class Player_Life_Component : MonoBehaviour
             _damageChrono = 0;
         }
 
-        if (health < 0) // Limitar el daño
+        if (health < 0)
         {
             health = 0;
         }
         
-        if (health == 0) // Muerte    
+        if (health == 0)
         {
-            gameObject.GetComponent<Animator>().SetBool("Death", true);
-            GameManager.Instance.OnPlayerDies();
+            
         }
-
         _myUIManager.UpdatePlayerLife(health);
     }
 
@@ -62,12 +60,6 @@ public class Player_Life_Component : MonoBehaviour
         {
             health = _maxLife;
         }
-        _myUIManager.UpdatePlayerLife(health);
-    }
-
-    public void unlockExHealth()
-    {
-        health = 6;
         _myUIManager.UpdatePlayerLife(health);
     }
     #endregion
@@ -86,6 +78,25 @@ public class Player_Life_Component : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Hit", false);
             change = Time.time + 0.5f;
         }
-        _damageChrono += Time.deltaTime; 
+        _damageChrono += Time.deltaTime;
+
+        //if (health == 0 && _myCharacterController.isGrounded)
+        if (health == 0)
+        {
+            gameObject.GetComponent<Animator>().SetBool("Death", true);
+            GameManager.Instance.Death();
+        }
     }
+    public void DesVida()
+    {
+        health = 6;
+        _myUIManager.UpdatePlayerLife(health);
+    }
+    public void Cura()
+    {
+        health++;
+        _myUIManager.UpdatePlayerLife(health);
+    }
+        
+ 
 }
