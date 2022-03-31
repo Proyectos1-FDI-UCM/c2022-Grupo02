@@ -9,9 +9,8 @@ public class DesVida : MonoBehaviour
         Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
         if (player != null)
         {
-            player.DesVida();
+            player.unlockExHealth();
             Destroy(this.gameObject);
         }
-
     }
 }

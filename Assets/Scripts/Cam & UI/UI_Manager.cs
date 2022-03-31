@@ -9,15 +9,20 @@ public class UI_Manager : MonoBehaviour
     [SerializeField]
     private GameObject _pauseMenu; // Objeto que contiene el menú de pausa
     [SerializeField]
+    private GameObject _deadMenu; // Objeto que contiene el menú de muerte
+    [SerializeField]
+    private GameObject _controlsMenu; // Menú de controles
+
+    [SerializeField]
     private GameObject _continueButton; // Botón de continue
     [SerializeField]
     private GameObject _controlsButton; // Botón de controles
     [SerializeField]
     private GameObject _quitButton; // Botón de quit
     [SerializeField]
-    private GameObject _controlsMenu; // Menú de controles
-    [SerializeField]
     private GameObject _backButton; // Botón de back (vuelve de controles al menú de pausa)
+    [SerializeField]
+    private GameObject _retryButton; // Botón de retry (vuelve a cargar el nivel)
     #endregion
 
     #region parameters
@@ -59,6 +64,11 @@ public class UI_Manager : MonoBehaviour
         _pauseMenu.SetActive(false);
     }
 
+    public void SetDeadScreen(bool enabled)
+    {
+        _deadMenu.SetActive(enabled);
+    }
+
     public void BackButton()
     {
         _controlsMenu.SetActive(false);
@@ -67,8 +77,14 @@ public class UI_Manager : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quit");
+        //Debug.Log("Quit");
         GameManager.Instance.Quit(); 
+    }
+
+    public void RetryLevel()
+    {
+        //Debug.Log("Retry");
+        GameManager.Instance.Retry();
     }
     #endregion
 
