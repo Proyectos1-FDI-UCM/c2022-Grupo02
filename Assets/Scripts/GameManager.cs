@@ -53,9 +53,8 @@ public class GameManager : MonoBehaviour
 
     public void FinJuego()
     {
-        //desactivar a Scottie 
-        //Activar el texto de la puntuación
-        //Activar el texto de Fin de Juego
+        _myPlayer.SetActive(false);//desactivar a Scottie 
+        _myUIManager.FinJuego();// llama al Ui Manager
     }
 
     private void SaveGameStatus()
@@ -92,8 +91,15 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _myUIManager = GameObject.Find("UI").GetComponent<UI_Manager>();
-        _myPlayer = GameObject.Find("Scottie");
+        do
+        {
+            _myUIManager = GameObject.Find("UI").GetComponent<UI_Manager>();
+        } while (_myUIManager == null);
+
+        do 
+        {
+            _myPlayer = GameObject.Find("Scottie");
+        } while (_myPlayer == null);
         _myInputManager = _myPlayer.GetComponent<InputManager>();
         _myCharacterMovementController = _myPlayer.GetComponent<Character_MovementController>();
         //_myUIManager.UpdatePlayerLife(_myUIManager._inicialHealth);

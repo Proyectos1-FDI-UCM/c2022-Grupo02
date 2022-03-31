@@ -11,7 +11,6 @@ public class BossLife_Controller : MonoBehaviour
 
     #region references
     private Transform _myTransform;
-    private HealthDropComponent _myHealthDropComponent;
     #endregion
 
     public void Damage(int Damage)
@@ -28,15 +27,11 @@ public class BossLife_Controller : MonoBehaviour
     {
         Destroy(gameObject);
         GameManager.Instance.FinJuego();
-        if (_myHealthDropComponent != null)
-        {
-            _myHealthDropComponent.TryToDrop(_myTransform.position);
-        }
+        
     }
 
     private void Start()
     {
         _myTransform = GetComponent<Transform>();
-        _myHealthDropComponent = GetComponent<HealthDropComponent>();
     }
 }

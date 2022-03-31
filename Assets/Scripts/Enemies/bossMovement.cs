@@ -27,10 +27,10 @@ public class bossMovement : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
-        gameObject.GetComponent<Animator>().SetBool("Ataque", true);
 
         if (player != null)
         {
+            gameObject.GetComponent<Animator>().SetBool("Ataque", true);
             if (gameObject.GetComponent<SpriteRenderer>().flipX && _Scottie.transform.position.x > _myTransform.position.x)
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = false;// girar izquierda 

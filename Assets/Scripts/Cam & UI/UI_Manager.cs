@@ -23,6 +23,9 @@ public class UI_Manager : MonoBehaviour
     private GameObject _backButton; // Botón de back (vuelve de controles al menú de pausa)
     [SerializeField]
     private GameObject _retryButton; // Botón de retry (vuelve a cargar el nivel)
+
+    [SerializeField]
+    private Text _finJuego;// Texto de Fin de Juego
     #endregion
 
     #region parameters
@@ -86,10 +89,17 @@ public class UI_Manager : MonoBehaviour
         //Debug.Log("Retry");
         GameManager.Instance.Retry();
     }
+
+    public void FinJuego()
+    {
+        _finJuego.enabled = true;// acctivar fin de juego
+        //_hearts[1].SetActive(false);
+    }
     #endregion
 
     void Start()
     {
         UpdatePlayerLife(_inicialHealth);
+        _finJuego.enabled = false;// desactivar fin de juego por defecto
     }
 }

@@ -367,6 +367,7 @@ MonoBehaviour:
   _quitButton: {fileID: 966730943}
   _backButton: {fileID: 1808577799}
   _retryButton: {fileID: 515635680}
+  _finJuego: {fileID: 2021607092}
   _hearts:
   - {fileID: 1559529228}
   - {fileID: 924535179}
@@ -1769,6 +1770,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 1828843874}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -2738,6 +2740,7 @@ MonoBehaviour:
   _quitButton: {fileID: 966730943}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -3253,6 +3256,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -3475,6 +3479,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 1808577799}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -4169,10 +4174,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1635883692227706628, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
-      propertyPath: probDivBy10
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2157835554470960510, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: speed
       value: 6.5
@@ -5635,6 +5636,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 1808577799}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -6061,7 +6063,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021607090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 900}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 31577087}
@@ -6069,8 +6071,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: -525}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 279, y: 26}
+  m_SizeDelta: {x: 866.8811, y: 200.6432}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021607092
 MonoBehaviour:
@@ -6085,7 +6087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6093,12 +6095,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 5dd49b3eacc540408c98eee0de38e0f1, type: 3}
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 1
+    m_MaxSize: 100
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
