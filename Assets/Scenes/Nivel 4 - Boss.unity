@@ -1929,6 +1929,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.53870726, y: 0.35170546, z: 0.2}
   m_Center: {x: 0.023713255, y: -0.042083647, z: 0}
+--- !u!114 &576163884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576163880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0aaab0ff7e6e3bd4cb076d0822d32f75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 20
 --- !u!4 &576163888 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5860873190253327431, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
@@ -4406,10 +4419,6 @@ PrefabInstance:
     - target: {fileID: 5120366668887914465, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: m_TagString
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 5687224992650460163, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
-      propertyPath: health
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5860873190253327431, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: m_RootOrder

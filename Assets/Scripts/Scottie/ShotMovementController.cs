@@ -16,10 +16,16 @@ public class ShotMovementController : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
+        BossLife_Controller boss = collision.gameObject.GetComponent<BossLife_Controller>();
         Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
+
         if (enemy != null)
         {
             enemy.Damage(damage);
+        }
+        else if (boss != null)
+        {
+            boss.Damage(damage);
         }
         if (player == null)//sin disparos infinitos preguntad si se puede hacer de otra forma o es admisible
         {

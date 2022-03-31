@@ -20,11 +20,16 @@ public class MeleAttack : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
+        BossLife_Controller boss = collision.gameObject.GetComponent<BossLife_Controller>();
 
         if (enemy != null)
         {
             enemy.Damage(_damage);
             Debug.Log(enemy);
+        }
+        if(boss != null)
+        {
+            boss.Damage(_damage);
         }
     }
 

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5860873190253327431}
   - component: {fileID: 3128630399754841178}
   - component: {fileID: 2157835554470960510}
-  - component: {fileID: 5687224992650460163}
   - component: {fileID: 1635883692227706628}
   - component: {fileID: -793633691101174193}
   m_Layer: 0
@@ -102,19 +101,6 @@ MonoBehaviour:
   damagetoplayer: 2
   _range: 5
   positions: []
---- !u!114 &5687224992650460163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5120366668887914465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf039bf728981f941bee947ab279b9a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
 --- !u!114 &1635883692227706628
 MonoBehaviour:
   m_ObjectHideFlags: 0
