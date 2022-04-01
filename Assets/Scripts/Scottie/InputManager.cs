@@ -11,20 +11,26 @@ public class InputManager : MonoBehaviour
     private Transform _myTransform;
     private JumpController _jumpController;
     private AttackController _AttackController;
+    private LoadScript _myload;
     #endregion
 
     #region parameters
     public int dir;
     private float change = 6;
-    private int magia = 0;
-    private int vida = 1;
+    public int magia = 0;
+    public int vida = 1;
     public int up = 0;
-    private int salto = 0;
+    public int salto = 0;
     #endregion
 
-
+    private void Awake()
+    {
+        magia = PlayerPrefs.GetInt("magia", 0);
+        salto = PlayerPrefs.GetInt("salto", 0);
+    }
     void Start()
     {
+        _myload = GetComponent<LoadScript>();
         _myCharacterMovementController = GetComponent<Character_MovementController>();
         _myCharacterController = GetComponent<CharacterController>();
         _myTransform = GetComponent<Transform>();
@@ -91,13 +97,18 @@ public class InputManager : MonoBehaviour
             change = 0; 
         } 
         _myCharacterMovementController.SetDirection(movementDirection);
+        Debug.Log(Input.GetKey(KeyCode.A));
     }
     public void DesSalto()
     {
         salto = 1;
+        PlayerPrefs.SetInt("salto", salto);
+        PlayerPrefs.Save();
     }
     public void DesMagia()
     {
         magia = 1;
+        PlayerPrefs.SetInt("magia", magia);
+        PlayerPrefs.Save();
     }
 }

@@ -7,7 +7,7 @@ public class Player_Life_Component : MonoBehaviour
 
     #region parameters
     [SerializeField]
-    private int _maxLife = 3;
+    public int _maxLife = 3;
     [SerializeField]
     private int health = 3;
     private float change = 0;
@@ -23,10 +23,16 @@ public class Player_Life_Component : MonoBehaviour
     #region references
     [SerializeField]
     private UI_Manager _myUIManager;
+    private InputManager _myinputmanager;
     CharacterController _myCharacterController;
+    private LoadScript _myload;
     #endregion
 
     #region methods
+    private void Awake()
+    {
+        _maxLife = PlayerPrefs.GetInt("vida", 5);
+    }
     public void damage(int damage)
     {
         //Debug.Log(_myUIManager == null);
@@ -67,8 +73,11 @@ public class Player_Life_Component : MonoBehaviour
 
     public void unlockExHealth()
     {
+        _maxLife = 6;
         health = 6;
         _myUIManager.UpdatePlayerLife(health);
+        PlayerPrefs.SetInt("vida", health);//preguntar
+        PlayerPrefs.Save();
     }
     #endregion
 
@@ -77,6 +86,8 @@ public class Player_Life_Component : MonoBehaviour
         _currentLife = _maxLife;
         //_myUIManager = GetComponent<UI_Manager>();
         _myCharacterController = GetComponent<CharacterController>();
+        _myinputmanager = GetComponent<InputManager>();
+        _myload = GetComponent<LoadScript>();
     }
 
     void Update()

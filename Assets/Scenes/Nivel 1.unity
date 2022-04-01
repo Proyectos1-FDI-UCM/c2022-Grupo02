@@ -810,11 +810,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8753694480856791670, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
   m_PrefabInstance: {fileID: 38322531}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &39136157 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1107990273358283963, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
-  m_PrefabInstance: {fileID: 640831615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &39546875
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1012,6 +1007,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 69715254}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -8074,6 +8070,7 @@ MonoBehaviour:
   _quitButton: {fileID: 377162747}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -13482,6 +13479,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+--- !u!4 &640831616 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+  m_PrefabInstance: {fileID: 640831615}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &644640534
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14223,7 +14225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   followSpeed: 3.5
   yPos: 0
-  _targetTransform: {fileID: 1963462917}
+  _targetTransform: {fileID: 640831616}
 --- !u!81 &659177181
 AudioListener:
   m_ObjectHideFlags: 0
@@ -14625,7 +14627,7 @@ PrefabInstance:
     - target: {fileID: 248109734932515193, guid: c64b0040c7f72a945a766863c9c5f34a, type: 3}
       propertyPath: _characterTransform
       value: 
-      objectReference: {fileID: 1963462917}
+      objectReference: {fileID: 0}
     - target: {fileID: 248109734932515195, guid: c64b0040c7f72a945a766863c9c5f34a, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -17813,7 +17815,7 @@ PrefabInstance:
     - target: {fileID: 7555014374031945928, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: _Scottie
       value: 
-      objectReference: {fileID: 1508987593}
+      objectReference: {fileID: 0}
     - target: {fileID: 7691356556294723321, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: m_Name
       value: "Enemigo Est\xE1tico"
@@ -26198,6 +26200,7 @@ MonoBehaviour:
   _quitButton: {fileID: 377162747}
   _backButton: {fileID: 69715254}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts:
   - {fileID: 2007922263}
   - {fileID: 1700686327}
@@ -26790,11 +26793,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1332261873}
   m_CullTransparentMesh: 1
---- !u!1 &1336225219 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1107990273835209474, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
-  m_PrefabInstance: {fileID: 640831615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1336580406 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3408416526578809144, guid: bbe83dd0c6a20524f8aef8390084c348, type: 3}
@@ -30290,26 +30288,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6751353817887940405, guid: a615d925b7798034d814adae50f16be4, type: 3}
   m_PrefabInstance: {fileID: 1638739662}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1508987593 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1107990274229792992, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
-  m_PrefabInstance: {fileID: 640831615}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1508987604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508987593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca5e7786c19e022459af8894b27513b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _myAttackL: {fileID: 39136157}
-  _myAttackR: {fileID: 2089402205}
-  _myAttackU: {fileID: 1336225219}
 --- !u!1001 &1514092560
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31312,6 +31290,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -31713,7 +31692,7 @@ PrefabInstance:
     - target: {fileID: 7555014374031945928, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: _Scottie
       value: 
-      objectReference: {fileID: 1508987593}
+      objectReference: {fileID: 0}
     - target: {fileID: 7691356556294723321, guid: 66bc202847097da47b7bba22293807e1, type: 3}
       propertyPath: m_Name
       value: "Enemigo Est\xE1tico (1)"
@@ -33626,6 +33605,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 1393390657}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -41537,11 +41517,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959839437}
   m_CullTransparentMesh: 1
---- !u!4 &1963462917 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1107990274229793001, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
-  m_PrefabInstance: {fileID: 640831615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1963710789 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1279497381824821784, guid: bbe83dd0c6a20524f8aef8390084c348, type: 3}
@@ -43263,6 +43238,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 69715254}
   _retryButton: {fileID: 0}
+  _finJuego: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -43611,11 +43587,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1279497381824821784, guid: bbe83dd0c6a20524f8aef8390084c348, type: 3}
   m_PrefabInstance: {fileID: 1131034289}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2089402205 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1107990275128699198, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
-  m_PrefabInstance: {fileID: 640831615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2089904861 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1279497381824821784, guid: bbe83dd0c6a20524f8aef8390084c348, type: 3}
@@ -43871,7 +43842,7 @@ PrefabInstance:
     - target: {fileID: 248109734932515193, guid: c64b0040c7f72a945a766863c9c5f34a, type: 3}
       propertyPath: _characterTransform
       value: 
-      objectReference: {fileID: 1963462917}
+      objectReference: {fileID: 0}
     - target: {fileID: 248109734932515195, guid: c64b0040c7f72a945a766863c9c5f34a, type: 3}
       propertyPath: m_RootOrder
       value: 2
