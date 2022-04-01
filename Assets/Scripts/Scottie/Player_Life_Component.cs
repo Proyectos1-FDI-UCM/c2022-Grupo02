@@ -31,7 +31,7 @@ public class Player_Life_Component : MonoBehaviour
     #region methods
     private void Awake()
     {
-        _maxLife = PlayerPrefs.GetInt("vida", 5);
+        _maxLife = PlayerPrefs.GetInt("vida", 6);
     }
     public void damage(int damage)
     {

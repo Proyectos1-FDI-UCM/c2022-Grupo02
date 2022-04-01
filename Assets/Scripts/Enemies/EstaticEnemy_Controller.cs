@@ -11,7 +11,6 @@ public class EstaticEnemy_Controller : MonoBehaviour
     #endregion
 
     #region references
-    [SerializeField]
     GameObject _Scottie;
     Transform _myTransform;
     #endregion

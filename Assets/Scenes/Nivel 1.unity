@@ -1008,6 +1008,7 @@ MonoBehaviour:
   _backButton: {fileID: 69715254}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -8071,6 +8072,7 @@ MonoBehaviour:
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -13477,6 +13479,26 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 6766537475797326130, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+      propertyPath: _gravity
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -34.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6994474734854657455, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+      propertyPath: _myUIManager
+      value: 
+      objectReference: {fileID: 1294107122}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
 --- !u!4 &640831616 stripped
@@ -15823,7 +15845,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2301703375029743553, guid: 325d72d755a9f364e96c1151ff04fb80, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2301703375029743553, guid: 325d72d755a9f364e96c1151ff04fb80, type: 3}
       propertyPath: m_LocalScale.x
@@ -15835,7 +15857,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2301703375029743553, guid: 325d72d755a9f364e96c1151ff04fb80, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -34.99
+      value: -34.72
       objectReference: {fileID: 0}
     - target: {fileID: 2301703375029743553, guid: 325d72d755a9f364e96c1151ff04fb80, type: 3}
       propertyPath: m_LocalPosition.y
@@ -26201,6 +26223,7 @@ MonoBehaviour:
   _backButton: {fileID: 69715254}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts:
   - {fileID: 2007922263}
   - {fileID: 1700686327}
@@ -31291,6 +31314,7 @@ MonoBehaviour:
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -33606,6 +33630,7 @@ MonoBehaviour:
   _backButton: {fileID: 0}
   _retryButton: {fileID: 1393390657}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -43239,6 +43264,7 @@ MonoBehaviour:
   _backButton: {fileID: 69715254}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0

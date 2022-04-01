@@ -1840,6 +1840,7 @@ MonoBehaviour:
   _backButton: {fileID: 480338776}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -6728,6 +6729,7 @@ MonoBehaviour:
   _backButton: {fileID: 480338776}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -7421,6 +7423,7 @@ MonoBehaviour:
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -24161,6 +24164,7 @@ MonoBehaviour:
   _backButton: {fileID: 480338776}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts:
   - {fileID: 1709673670}
   - {fileID: 1409885715}
@@ -25295,6 +25299,7 @@ MonoBehaviour:
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -25852,6 +25857,7 @@ MonoBehaviour:
   _backButton: {fileID: 0}
   _retryButton: {fileID: 811481002}
   _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
   _hearts: []
   _inicialHealth: 0
   _maximumHealth: 0
@@ -31527,6 +31533,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6766537475797326130, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
+      propertyPath: _gravity
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6983378432646464433, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: m_Name
       value: Scottie
@@ -31537,11 +31547,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 192.8
+      value: -19.4
       objectReference: {fileID: 0}
     - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: m_LocalPosition.z

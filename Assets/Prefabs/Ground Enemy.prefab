@@ -100,9 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab16e78370df00f43943f40860e113be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 7
   damagetoplayer: 2
   positions: []
+  audioSource: {fileID: 0}
 --- !u!136 &7692565304247762492
 CapsuleCollider:
   m_ObjectHideFlags: 0

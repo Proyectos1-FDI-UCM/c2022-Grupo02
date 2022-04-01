@@ -26,6 +26,8 @@ public class UI_Manager : MonoBehaviour
 
     [SerializeField]
     private Text _finJuego;// Texto de Fin de Juego
+    [SerializeField]
+    private GameObject _Hud;
     #endregion
 
     #region parameters
@@ -93,13 +95,12 @@ public class UI_Manager : MonoBehaviour
     public void FinJuego()
     {
         _finJuego.enabled = true;// acctivar fin de juego
-        //_hearts[1].SetActive(false);
+        _Hud.SetActive(false);// desactivar HUD
     }
     #endregion
 
     void Start()
     {
         UpdatePlayerLife(_inicialHealth);
-        _finJuego.enabled = false;// desactivar fin de juego por defecto
     }
 }

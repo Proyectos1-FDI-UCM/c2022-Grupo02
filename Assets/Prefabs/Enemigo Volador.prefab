@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ff351b3152ec2f40adf582873160fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 8
   damagetoplayer: 1
   _range: 50
   _characterTransform: {fileID: 0}

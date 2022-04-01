@@ -49,7 +49,7 @@ public class FlyingEnemy_Controller : MonoBehaviour
     {
 
         Vector2 _target = new Vector2(_Scottie.transform.position.x, _Scottie.transform.position.y);
-        if (Vector2.Distance(_batTransform.position, _Scottie.transform.position) < _range && Vector2.Distance(_batTransform.position, _Scottie.transform.position) > _range / 3.0f)
+        if (Vector2.Distance(_batTransform.position, _Scottie.transform.position) < _range && Vector2.Distance(_batTransform.position, _Scottie.transform.position) > _range / 6.0f)
         {
             Vector2 _newPosition = Vector2.MoveTowards(_batRigidBody.position, _target, _speed * Time.deltaTime);
             _batRigidBody.MovePosition(_newPosition);
