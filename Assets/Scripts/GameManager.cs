@@ -19,10 +19,12 @@ public class GameManager : MonoBehaviour
     private GameObject _myPlayer;
     private InputManager _myInputManager;
     private Character_MovementController _myCharacterMovementController;
+    private CambioNivel _mycambio;
     #endregion
 
     #region parameters 
     float timeToDeadScreen = 100f;
+    public int scene = 1;
     #endregion
 
     #region methods
@@ -67,6 +69,18 @@ public class GameManager : MonoBehaviour
 
     public void Retry()
     {
+        if(scene == 1)
+        {
+            PlayerPrefs.DeleteKey("magia");
+        }
+        if (scene == 2)
+        {
+            PlayerPrefs.DeleteKey("salto");
+        }
+        if (scene == 3)
+        {
+            PlayerPrefs.DeleteKey("vida");
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -86,6 +100,7 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         _instance = this;
+        _mycambio = GetComponent<CambioNivel>();
     }
 
     // Start is called before the first frame update
