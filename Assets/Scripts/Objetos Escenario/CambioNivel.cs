@@ -6,11 +6,13 @@ using UnityEngine.SceneManagement;
 public class CambioNivel : MonoBehaviour
 {
     GameManager _mygamemanager;
+    private int scene;
 
     private void Awake()
     {
         _mygamemanager = GetComponent<GameManager>();
-        _mygamemanager.scene = PlayerPrefs.GetInt("Scena", 1);
+        scene = PlayerPrefs.GetInt("Scena", 1);
+
         //Debug.Log(scene);
     }
     private void OnTriggerEnter(Collider collision)
@@ -19,9 +21,10 @@ public class CambioNivel : MonoBehaviour
         Debug.Log(player);
         if (player != null)
         {
-            _mygamemanager.scene = SceneManager.GetActiveScene().buildIndex + 1;
-            PlayerPrefs.SetInt("Scena", _mygamemanager.scene);
-            SceneManager.LoadScene(_mygamemanager.scene);
+            scene = SceneManager.GetActiveScene().buildIndex + 1;
+            PlayerPrefs.SetInt("Scena", scene);
+            SceneManager.LoadScene(scene);
+            _mygamemanager.scene = scene;
         }
  
     }
