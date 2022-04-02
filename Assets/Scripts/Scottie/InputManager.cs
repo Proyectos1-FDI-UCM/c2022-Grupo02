@@ -75,7 +75,6 @@ public class InputManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(salto);
             _jumpController.Jump(salto);
         }
 
@@ -97,7 +96,6 @@ public class InputManager : MonoBehaviour
             change = 0; 
         } 
         _myCharacterMovementController.SetDirection(movementDirection);
-        Debug.Log(Input.GetKey(KeyCode.A));
     }
     public void DesSalto()
     {

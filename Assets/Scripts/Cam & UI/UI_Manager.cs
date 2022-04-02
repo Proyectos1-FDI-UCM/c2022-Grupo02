@@ -32,7 +32,9 @@ public class UI_Manager : MonoBehaviour
 
     #region parameters
     [SerializeField]
-    private GameObject[] _hearts;
+    private GameObject[] _redHearts;
+    [SerializeField]
+    private GameObject[] _grayHearts;
     [SerializeField]
     public int _inicialHealth;
     [SerializeField]
@@ -44,11 +46,11 @@ public class UI_Manager : MonoBehaviour
     {
         for(int i = 0; i < _newHP; i++)
         {
-            _hearts[i].SetActive(true);
+            _redHearts[i].SetActive(true);
         }
         for (int i = _newHP; i < _maximumHealth ; i++)
         {
-            _hearts[i].SetActive(false);
+            _redHearts[i].SetActive(false);
         }
     }
 
@@ -97,6 +99,15 @@ public class UI_Manager : MonoBehaviour
         _finJuego.enabled = true;// acctivar fin de juego
         _Hud.SetActive(false);// desactivar HUD
     }
+
+    public void HPIncrease(int _maxHP)
+    {
+        _maximumHealth = _maxHP;
+        _grayHearts[0].SetActive(true);
+        _grayHearts[1].SetActive(true);
+        UpdatePlayerLife(8);
+    }
+
     #endregion
 
     void Start()

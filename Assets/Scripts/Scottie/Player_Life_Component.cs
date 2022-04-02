@@ -73,9 +73,9 @@ public class Player_Life_Component : MonoBehaviour
 
     public void unlockExHealth()
     {
-        _maxLife = 6;
-        health = 6;
-        _myUIManager.UpdatePlayerLife(health);
+        _maxLife = 8;
+        health = 8;
+        _myUIManager.HPIncrease(_maxLife);
         PlayerPrefs.SetInt("vida", health);//preguntar
         PlayerPrefs.Save();
     }
