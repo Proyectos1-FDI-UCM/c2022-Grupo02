@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
     public void OnPlayerDies()
     {
         playerMovementActive(false);
-
         _myUIManager.SetDeadScreen(true);
     }
 
@@ -82,6 +81,11 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.DeleteKey("vida");
         }
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void Quit()

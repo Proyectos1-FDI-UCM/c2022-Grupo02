@@ -23,6 +23,8 @@ public class UI_Manager : MonoBehaviour
     private GameObject _backButton; // Botón de back (vuelve de controles al menú de pausa)
     [SerializeField]
     private GameObject _retryButton; // Botón de retry (vuelve a cargar el nivel)
+    [SerializeField]
+    private GameObject _MainMenuButton; // Botón para volver al menú principal
 
     [SerializeField]
     private Text _finJuego;// Texto de Fin de Juego
@@ -94,10 +96,17 @@ public class UI_Manager : MonoBehaviour
         GameManager.Instance.Retry();
     }
 
+    public void MainMenu()
+    {
+        //Debug.Log("Retry");
+        GameManager.Instance.LoadMainMenu();
+    }
+
     public void FinJuego()
     {
         _finJuego.enabled = true;// acctivar fin de juego
         _Hud.SetActive(false);// desactivar HUD
+        _MainMenuButton.SetActive(true);
     }
 
     public void HPIncrease(int _maxHP)
