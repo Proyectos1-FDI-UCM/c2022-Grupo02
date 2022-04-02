@@ -377,6 +377,7 @@ MonoBehaviour:
   _quitButton: {fileID: 966730943}
   _backButton: {fileID: 1808577799}
   _retryButton: {fileID: 515635680}
+  _MainMenuButton: {fileID: 1378883011}
   _finJuego: {fileID: 2021607092}
   _Hud: {fileID: 541607098}
   _redHearts:
@@ -1849,6 +1850,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 1828843874}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -2978,6 +2980,7 @@ MonoBehaviour:
   _quitButton: {fileID: 966730943}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -3593,6 +3596,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -3823,6 +3827,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 1808577799}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -4375,13 +4380,14 @@ GameObject:
   - component: {fileID: 1378883015}
   - component: {fileID: 1378883014}
   - component: {fileID: 1378883013}
+  - component: {fileID: 1378883016}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1378883012
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4445,7 +4451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1378883014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1378883016}
+        m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
+        m_MethodName: MainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1378883014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4484,6 +4502,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378883011}
   m_CullTransparentMesh: 1
+--- !u!114 &1378883016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378883011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc225143a36d4074a9e395f65c6c0519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseMenu: {fileID: 0}
+  _deadMenu: {fileID: 0}
+  _controlsMenu: {fileID: 0}
+  _continueButton: {fileID: 0}
+  _controlsButton: {fileID: 0}
+  _quitButton: {fileID: 0}
+  _backButton: {fileID: 0}
+  _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
+  _finJuego: {fileID: 0}
+  _Hud: {fileID: 0}
+  _redHearts: []
+  _grayHearts: []
+  _inicialHealth: 0
+  _maximumHealth: 0
 --- !u!1001 &1380375221
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5951,7 +5996,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Men\xFA principal"
+  m_Text: Main Menu
 --- !u!222 &1769299674
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6174,6 +6219,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 1808577799}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -6916,7 +6962,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2021607090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
