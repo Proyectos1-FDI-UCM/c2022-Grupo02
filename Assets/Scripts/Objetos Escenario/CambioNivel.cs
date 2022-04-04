@@ -24,6 +24,7 @@ public class CambioNivel : MonoBehaviour
             scene = SceneManager.GetActiveScene().buildIndex + 1;
             PlayerPrefs.SetInt("Scena", scene);
             SceneManager.LoadScene(scene);
+            Debug.Log(scene);
             _mygamemanager.scene = scene;
         }
  
