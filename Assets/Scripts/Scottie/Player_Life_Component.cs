@@ -31,7 +31,7 @@ public class Player_Life_Component : MonoBehaviour
     #region methods
     private void Awake()
     {
-        _maxLife = PlayerPrefs.GetInt("vida", 6);
+        _maxLife = PlayerPrefs.GetInt("vida", health);
     }
     public void damage(int damage)
     {
@@ -83,7 +83,7 @@ public class Player_Life_Component : MonoBehaviour
 
     void Start()
     {
-        _currentLife = _maxLife;
+        health = _maxLife;
         //_myUIManager = GetComponent<UI_Manager>();
         _myCharacterController = GetComponent<CharacterController>();
         _myinputmanager = GetComponent<InputManager>();

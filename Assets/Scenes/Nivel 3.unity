@@ -565,6 +565,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 503146545}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -2299,6 +2300,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 1263474062}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -4956,6 +4958,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 1263474062}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -5531,6 +5534,7 @@ MonoBehaviour:
   _quitButton: {fileID: 1428411065}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -6180,6 +6184,7 @@ MonoBehaviour:
   _quitButton: {fileID: 1428411065}
   _backButton: {fileID: 1263474062}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts:
@@ -6195,7 +6200,7 @@ MonoBehaviour:
   - {fileID: 1324893384}
   - {fileID: 1233944681}
   _inicialHealth: 6
-  _maximumHealth: 6
+  _maximumHealth: 8
 --- !u!224 &1589208461
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7340,6 +7345,7 @@ MonoBehaviour:
   _quitButton: {fileID: 0}
   _backButton: {fileID: 0}
   _retryButton: {fileID: 0}
+  _MainMenuButton: {fileID: 0}
   _finJuego: {fileID: 0}
   _Hud: {fileID: 0}
   _redHearts: []
@@ -7618,6 +7624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bba1dd8c591c5b43ab6207e5fcb99ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: 1
 --- !u!4 &1896020644
 Transform:
   m_ObjectHideFlags: 0

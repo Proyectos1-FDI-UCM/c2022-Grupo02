@@ -121,6 +121,12 @@ public class UI_Manager : MonoBehaviour
 
     void Start()
     {
+        _inicialHealth = _maximumHealth;
+        if (_inicialHealth > 6)
+        {
+            _grayHearts[0].SetActive(true);
+            _grayHearts[1].SetActive(true);
+        }
         UpdatePlayerLife(_inicialHealth);
     }
 }

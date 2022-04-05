@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5327471784795922098}
   - component: {fileID: 6372560313075707412}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4854459439405162007}
   - component: {fileID: 6048065848326784070}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 2366805081625998297}
   - component: {fileID: 4847687466786423779}
   - component: {fileID: -3421203605615247827}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Entrada Cueva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
