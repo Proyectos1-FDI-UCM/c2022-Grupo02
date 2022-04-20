@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class DeathZone : MonoBehaviour
 {
-    [SerializeField]
-    int muerteInstanntanea = 6;
+
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -15,7 +14,9 @@ public class DeathZone : MonoBehaviour
         if (player != null)
         {
             //Debug.Log("Detecta");
-            player.damage(muerteInstanntanea);
+            GameManager.Instance.OnPlayerDies();
+            player.gameObject.GetComponent<Animator>().SetBool("Death", true);
         }
     }
+
 }

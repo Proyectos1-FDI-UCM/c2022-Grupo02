@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         playerMovementActive(false);
         _myUIManager.SetDeadScreen(true);
+        _myUIManager.UpdatePlayerLife(0);
     }
 
     public void FinJuego()
