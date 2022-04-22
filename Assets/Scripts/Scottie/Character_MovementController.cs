@@ -35,7 +35,6 @@ public class Character_MovementController : MonoBehaviour
     {
         _myCharacterController = GetComponent<CharacterController>();
         _myJumpController = GetComponent<JumpController>();
-
     }
 
     // Update is called once per frame

@@ -11,6 +11,7 @@ public class JumpController : MonoBehaviour
     float _jumpSpeed = 0f;
     Vector3 velocity;
     private bool uno = true;
+    //private bool groPrevFrame = false;
     #endregion
 
     #region properties
@@ -45,16 +46,15 @@ public class JumpController : MonoBehaviour
     {
         if (!_myCharacterController.isGrounded)
         {
-            _gravitySpeed -= _gravity * (Time.deltaTime/2.0f);
-            velocity.y -= _gravitySpeed;
-            //Debug.Log(velocity.y);
+            velocity.y += _gravity * (Time.deltaTime);
         }
         else
         {
-            _gravitySpeed = 0.05f;
+            if (velocity.y < -2) velocity.y = -1;
             uno = true;
-            //Debug.Log("estoy en el suelo");
         }
+
+        //groPrevFrame = _myCharacterController.isGrounded;
         return velocity;
     }
 
@@ -76,5 +76,7 @@ public class JumpController : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);
         }
+        //Debug.Log(velocity.y);
+        Debug.Log(_myCharacterController.isGrounded);
     }
 } 
