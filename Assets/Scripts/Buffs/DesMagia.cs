@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class DesMagia : MonoBehaviour
 {
-    
+    [SerializeField]
+    private GameObject _sound;
+
         //public AudioSource audioSource;
 
 
@@ -18,6 +20,7 @@ public class DesMagia : MonoBehaviour
             //audioSource.Play();
             _inputmanager.DesMagia();
             Destroy(this.gameObject);
+            _sound.SetActive(true);
         }
 
     }

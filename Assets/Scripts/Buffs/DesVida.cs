@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class DesVida : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject _sound;
+
     private void OnTriggerEnter(Collider collision)
     {
         Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
@@ -11,6 +14,7 @@ public class DesVida : MonoBehaviour
         {
             player.unlockExHealth();
             Destroy(this.gameObject);
+            _sound.SetActive(true);
         }
     }
 }
