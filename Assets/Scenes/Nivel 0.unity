@@ -32303,7 +32303,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 854423384587308606, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: _damage
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6766537475797326130, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: _gravity
