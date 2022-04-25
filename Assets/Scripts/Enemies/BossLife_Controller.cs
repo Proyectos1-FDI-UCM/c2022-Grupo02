@@ -6,11 +6,15 @@ public class BossLife_Controller : MonoBehaviour
 {
     #region parameters
     [SerializeField]
-    private int health = 1;
+    public int health = 1;
+    [SerializeField]
+    public int maxHealth = 20;
     #endregion
 
     #region references
     private Transform _myTransform;
+    public HealthBar HealthBar;
+
     #endregion
 
     public void Damage(int Damage)
@@ -32,6 +36,9 @@ public class BossLife_Controller : MonoBehaviour
 
     private void Start()
     {
+        health = maxHealth;
+        HealthBar.SetHealth(health, maxHealth);
         _myTransform = GetComponent<Transform>();
+       
     }
 }

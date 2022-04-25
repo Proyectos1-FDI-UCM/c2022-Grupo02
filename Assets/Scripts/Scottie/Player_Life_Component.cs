@@ -14,6 +14,8 @@ public class Player_Life_Component : MonoBehaviour
     private float _damageChrono = 10;
     [SerializeField]
     private float _timeToRecieveDamage;
+    [SerializeField]
+    public float volume = 0.5f;
     #endregion
 
     #region properties
@@ -26,6 +28,8 @@ public class Player_Life_Component : MonoBehaviour
     private InputManager _myinputmanager;
     CharacterController _myCharacterController;
     private LoadScript _myload;
+    public AudioSource audioSource;
+    public AudioClip clip;
     #endregion
 
     #region methods
@@ -54,7 +58,7 @@ public class Player_Life_Component : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("Death", true);
             GameManager.Instance.OnPlayerDies();
         }
-
+        audioSource.PlayOneShot(clip, volume);
         _myUIManager.UpdatePlayerLife(health);
     }
 

@@ -20,11 +20,15 @@ public class GameManager : MonoBehaviour
     private InputManager _myInputManager;
     private Character_MovementController _myCharacterMovementController;
     private CambioNivel _mycambio;
+    public AudioSource audioSource;
+    public AudioClip clip2;
     #endregion
 
     #region parameters 
     float timeToDeadScreen = 100f;
     public int scene = 1;
+    [SerializeField]
+    public float volume = 0.5f;
     #endregion
 
     #region methods
@@ -51,6 +55,7 @@ public class GameManager : MonoBehaviour
         playerMovementActive(false);
         _myUIManager.SetDeadScreen(true);
         _myUIManager.UpdatePlayerLife(0);
+        AudioSource.PlayClipAtPoint(clip2, transform.position, volume);
     }
 
     public void FinJuego()
