@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8668963410302531292}
   - component: {fileID: 5792684367809344796}
   - component: {fileID: 5261396575777321966}
+  - component: {fileID: 623468883677766864}
   m_Layer: 13
   m_Name: BloqueDest
   m_TagString: Bloque Destructible
@@ -110,3 +111,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.56, y: 2.56, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &623468883677766864
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216115025219814073}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

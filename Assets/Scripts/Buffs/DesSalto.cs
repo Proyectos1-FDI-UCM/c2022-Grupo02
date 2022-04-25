@@ -6,6 +6,8 @@ public class DesSalto : MonoBehaviour
 {
     [SerializeField]
     private GameObject _sound;
+    [SerializeField]
+    private GameObject _textMagia;
     private void OnTriggerEnter(Collider collision)
     {
         InputManager _inputmanager = collision.gameObject.GetComponent<InputManager>();
@@ -15,6 +17,7 @@ public class DesSalto : MonoBehaviour
             _inputmanager.DesSalto();
             Destroy(this.gameObject);
             _sound.SetActive(true);
+            _textMagia.SetActive(true);
         }
 
     }

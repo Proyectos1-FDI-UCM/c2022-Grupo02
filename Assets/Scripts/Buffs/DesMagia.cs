@@ -6,6 +6,9 @@ public class DesMagia : MonoBehaviour
 {
     [SerializeField]
     private GameObject _sound;
+    [SerializeField]
+    private GameObject _text;
+
 
         //public AudioSource audioSource;
 
@@ -21,6 +24,7 @@ public class DesMagia : MonoBehaviour
             _inputmanager.DesMagia();
             Destroy(this.gameObject);
             _sound.SetActive(true);
+            _text.SetActive(true);
         }
 
     }
