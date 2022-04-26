@@ -72,6 +72,7 @@ public class GroundEnemy_Controller : MonoBehaviour
         if (Time.time >= change)// cambiar el booleano a false tras un tiempo
         {
             gameObject.GetComponent<Animator>().SetBool("Ataque", false);
+            gameObject.GetComponent<Animator>().SetBool("Hit", false);
             _AuxSpeed = speed;
             change = Time.time + 0.5f;
         }

@@ -29,6 +29,7 @@ public class EstaticEnemy_Controller : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("EatRight", false);
             gameObject.GetComponent<Animator>().SetBool("EatLeft", false);
+            gameObject.GetComponent<Animator>().SetBool("Hit", false);
             change = Time.time + 0.5f;
         }
     }
