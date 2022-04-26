@@ -14446,11 +14446,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 188.1
+      value: -35.13
       objectReference: {fileID: 0}
     - target: {fileID: 6983378432646464440, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8
+      value: -2.05
       objectReference: {fileID: 0}
     - target: {fileID: 6994474734854657455, guid: 43e60a0975222ed4a94511705a96071d, type: 3}
       propertyPath: _myUIManager
@@ -44763,6 +44763,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 1
+  volume: 0.5
 --- !u!4 &1958928965
 Transform:
   m_ObjectHideFlags: 0

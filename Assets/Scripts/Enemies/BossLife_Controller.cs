@@ -9,11 +9,15 @@ public class BossLife_Controller : MonoBehaviour
     public int health = 1;
     [SerializeField]
     public int maxHealth = 20;
+    [SerializeField]
+    public float volume = 0.5f;
     #endregion
 
     #region references
     private Transform _myTransform;
     public HealthBar HealthBar;
+    public AudioSource audioSource;
+    public AudioClip clip;
 
     #endregion
 
@@ -21,6 +25,7 @@ public class BossLife_Controller : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
         health -= Damage;
+        audioSource.PlayOneShot(clip, volume);
         if (health <= 0)
         {
             Die();
