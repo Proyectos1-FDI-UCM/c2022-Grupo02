@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
 
     #region parameters 
     float timeToDeadScreen = 100f;
-    public int scene = 1;
+    public int scene;
     [SerializeField]
     public float volume = 0.5f;
     #endregion
@@ -74,15 +74,19 @@ public class GameManager : MonoBehaviour
         if(scene == 1)
         {
             PlayerPrefs.DeleteKey("magia");
+            PlayerPrefs.DeleteKey("salto");
+            PlayerPrefs.DeleteKey("vida");
         }
         if (scene == 2)
         {
             PlayerPrefs.DeleteKey("salto");
+            PlayerPrefs.DeleteKey("vida");
         }
         if (scene == 3)
         {
             PlayerPrefs.DeleteKey("vida");
         }
+        Debug.Log(scene);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
+        scene = PlayerPrefs.GetInt("Scena", 1);
         _instance = this;
         _mycambio = GetComponent<CambioNivel>();
     }
