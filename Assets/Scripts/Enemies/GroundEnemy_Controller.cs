@@ -17,7 +17,6 @@ public class GroundEnemy_Controller : MonoBehaviour
     #endregion
 
     #region references
-    [SerializeField]
     private Transform _myTransform;
     private GameObject _Scottie;
     #endregion
