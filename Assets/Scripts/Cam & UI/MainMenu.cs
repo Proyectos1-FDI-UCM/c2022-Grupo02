@@ -18,6 +18,21 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.DeleteAll();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public void PruebaCombate()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 6);
+    }
+    public void PruebaMovimiento()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 7);
+    }
+    public void PruebaPowerUp()
+    {
+        PlayerPrefs.DeleteAll();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 8);
+    }
     public void LoadGame()
     {
         SceneManager.LoadScene(_mygamemanager.scene);
