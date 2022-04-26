@@ -19,9 +19,7 @@ public class GameManager : MonoBehaviour
     private GameObject _myPlayer;
     private InputManager _myInputManager;
     private Character_MovementController _myCharacterMovementController;
-    private CambioNivel _mycambio;
-    public AudioSource audioSource;
-    public AudioClip clip2;
+    private CambioNivel _mycambio;    
     #endregion
 
     #region parameters 
@@ -55,7 +53,6 @@ public class GameManager : MonoBehaviour
         playerMovementActive(false);
         _myUIManager.SetDeadScreen(true);
         _myUIManager.UpdatePlayerLife(0);
-        AudioSource.PlayClipAtPoint(clip2, transform.position, volume);
     }
 
     public void FinJuego()

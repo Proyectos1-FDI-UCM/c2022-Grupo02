@@ -77,6 +77,6 @@ public class JumpController : MonoBehaviour
             gameObject.GetComponent<Animator>().SetBool("StartJumping", false);
         }
         //Debug.Log(velocity.y);
-        Debug.Log(_myCharacterController.isGrounded);
+        //Debug.Log(_myCharacterController.isGrounded);
     }
 } 
