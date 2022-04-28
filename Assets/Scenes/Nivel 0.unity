@@ -25868,6 +25868,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7692565304247762493, guid: c013a4adf26b95a49b22e2c8f79c48e6, type: 3}
+      propertyPath: damagetoplayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692565304247762493, guid: c013a4adf26b95a49b22e2c8f79c48e6, type: 3}
       propertyPath: positions.Array.size
       value: 2
       objectReference: {fileID: 0}

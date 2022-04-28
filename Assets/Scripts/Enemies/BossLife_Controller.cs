@@ -28,7 +28,8 @@ public class BossLife_Controller : MonoBehaviour
         audioSource.PlayOneShot(clip, volume);
         if (health <= 0)
         {
-            Die();
+            //gameObject.GetComponent<Animator>().SetBool("Hit", false);
+            gameObject.GetComponent<Animator>().SetBool("Efecto", true);
         }
     }
 

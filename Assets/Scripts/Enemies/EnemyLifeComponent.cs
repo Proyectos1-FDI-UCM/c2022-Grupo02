@@ -9,9 +9,9 @@ public class EnemyLifeComponent : MonoBehaviour
     private int health = 1;
     [SerializeField]
     public float volume = 0.5f;
-#endregion
+    #endregion
 
-#region references
+    #region references
     public AudioSource audioSource;
     public AudioClip clip;
     public AudioClip clip2;
@@ -26,8 +26,8 @@ public class EnemyLifeComponent : MonoBehaviour
         audioSource.PlayOneShot(clip, volume);
         if (health <= 0)
         {
-            Die();
-            
+            gameObject.GetComponent<Animator>().SetBool("Hit", false);
+            gameObject.GetComponent<Animator>().SetBool("Efecto", true);
         }
     }
 
