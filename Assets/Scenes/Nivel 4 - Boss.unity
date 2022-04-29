@@ -1089,7 +1089,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &31577087
 RectTransform:
@@ -6822,7 +6822,7 @@ GameObject:
   - component: {fileID: 326117202}
   - component: {fileID: 326117204}
   - component: {fileID: 326117203}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7762,7 +7762,7 @@ GameObject:
   - component: {fileID: 402070770}
   - component: {fileID: 402070772}
   - component: {fileID: 402070771}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11597,24 +11597,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.53870726, y: 0.35170546, z: 0.2}
   m_Center: {x: 0.023713255, y: -0.042083647, z: 0}
---- !u!114 &576163884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576163880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0aaab0ff7e6e3bd4cb076d0822d32f75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 20
-  maxHealth: 20
-  volume: 0.5
-  HealthBar: {fileID: 2002450326}
-  audioSource: {fileID: 576163885}
-  clip: {fileID: 8300000, guid: 14ee7607fe5525242a85fc0fd4ce79c7, type: 3}
 --- !u!82 &576163885
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12455,7 +12437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615070913}
   - component: {fileID: 615070912}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21991,7 +21973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1156562955}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22447,6 +22429,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4411267581819490917, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
+      propertyPath: m_SortingOrder
+      value: -80
+      objectReference: {fileID: 0}
     - target: {fileID: 5198083066354777705, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
       propertyPath: m_Name
       value: Negro (1)
@@ -22473,7 +22459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8753694480856791670, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8753694480856791670, guid: 0524440e02fb11e4ea6340b5f8db3f89, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29354,7 +29340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.015686274, g: 0.28603846, b: 1, a: 0.16862746}
+  m_Color: {r: 0.015686274, g: 0.28603846, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -29655,11 +29641,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5120366668887914465, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: m_Layer
-      value: 3
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5120366668887914465, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5860873190253327431, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: m_RootOrder
@@ -29714,13 +29700,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6953628527429158935, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 14ee7607fe5525242a85fc0fd4ce79c7, type: 3}
+    - target: {fileID: 6953628527429158935, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: health
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6953628527429158935, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
+      propertyPath: HealthBar
+      value: 
+      objectReference: {fileID: 2002450326}
+    - target: {fileID: 6953628527429158935, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: maxHealth
-      value: 1
+      value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 6953628527429158935, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 576163885}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
 --- !u!1 &1501906053 stripped
@@ -34453,7 +34451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1785226492}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: BolaPos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38559,7 +38557,7 @@ GameObject:
   - component: {fileID: 2002450329}
   - component: {fileID: 2002450328}
   - component: {fileID: 2002450326}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

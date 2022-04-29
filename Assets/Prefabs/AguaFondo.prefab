@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7467202958851803802}
   - component: {fileID: 7348883685275258920}
+  - component: {fileID: -1927808959616493131}
   m_Layer: 0
   m_Name: AguaFondo
   m_TagString: Untagged
@@ -82,3 +83,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-1927808959616493131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520851659885408389}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

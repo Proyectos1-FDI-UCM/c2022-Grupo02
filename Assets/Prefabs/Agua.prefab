@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3322760705469376955}
   - component: {fileID: 2493124197723020952}
   - component: {fileID: 2493124197723020953}
+  - component: {fileID: -1581584195666786267}
   m_Layer: 0
   m_Name: Agua
   m_TagString: Untagged
@@ -102,3 +103,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1581584195666786267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3588995175543935913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f658e8ee3a2c849a2a3a772e586bda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
