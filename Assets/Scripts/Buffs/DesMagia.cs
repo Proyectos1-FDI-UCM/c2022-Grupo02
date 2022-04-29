@@ -23,8 +23,8 @@ public class DesMagia : MonoBehaviour
             //audioSource.Play();
             _inputmanager.DesMagia();
             Destroy(this.gameObject);
-            _sound.SetActive(true);
-            _text.SetActive(true);
+            if(_sound != null)_sound.SetActive(true);
+            if(_text != null)_text.SetActive(true);
         }
 
     }

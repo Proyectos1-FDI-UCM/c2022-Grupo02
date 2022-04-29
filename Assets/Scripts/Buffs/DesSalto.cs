@@ -16,8 +16,8 @@ public class DesSalto : MonoBehaviour
         {
             _inputmanager.DesSalto();
             Destroy(this.gameObject);
-            _sound.SetActive(true);
-            _textMagia.SetActive(true);
+            if(_sound != null)_sound.SetActive(true);
+            if(_textMagia != null)_textMagia.SetActive(true);
         }
 
     }
