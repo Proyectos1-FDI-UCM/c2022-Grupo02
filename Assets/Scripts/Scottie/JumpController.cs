@@ -14,10 +14,6 @@ public class JumpController : MonoBehaviour
     //private bool groPrevFrame = false;
     #endregion
 
-    #region properties
-    float _gravitySpeed;
-    #endregion
-
     #region referneces
     CharacterController _myCharacterController;
     #endregion
@@ -33,7 +29,6 @@ public class JumpController : MonoBehaviour
         }
         else if (!_myCharacterController.isGrounded && salto == 1 && uno)
         {
-            _gravitySpeed = 0;
             gameObject.GetComponent<Animator>().SetBool("StartJumping", true);
             gameObject.GetComponent<Animator>().SetBool("Walk", false);
             velocity.y = _jumpSpeed;

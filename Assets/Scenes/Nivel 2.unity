@@ -2542,7 +2542,7 @@ Transform:
   m_Children:
   - {fileID: 1244263477}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &83878171
 PrefabInstance:
@@ -10553,7 +10553,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485374643
 GameObject:
@@ -20476,7 +20476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &987118171 stripped
 Transform:
@@ -22656,7 +22656,7 @@ GameObject:
   - component: {fileID: 1067213353}
   - component: {fileID: 1067213352}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: BackToMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22735,7 +22735,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1067213352}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -25763,7 +25763,7 @@ Transform:
   - {fileID: 655920902}
   - {fileID: 1077795785}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1163317187
 PrefabInstance:
@@ -35994,7 +35994,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1768271300
 PrefabInstance:
@@ -36141,7 +36141,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: 'Main Menu
+
+'
 --- !u!222 &1770365771
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39456,7 +39458,7 @@ RectTransform:
   - {fileID: 1945017783}
   - {fileID: 1812245899}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -6,9 +6,6 @@ public class ShotMovementController : MonoBehaviour
 {
     #region parameters
     [SerializeField]
-    private float LifeTime = 10;
-    private float live = 0;
-    [SerializeField]
     private int damage = 1;
     #endregion 
 

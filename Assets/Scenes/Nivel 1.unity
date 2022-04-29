@@ -9181,7 +9181,7 @@ GameObject:
   - component: {fileID: 377162749}
   - component: {fileID: 377162748}
   m_Layer: 5
-  m_Name: QuitButton
+  m_Name: BackToMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9260,7 +9260,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 377162748}
         m_TargetAssemblyTypeName: UI_Manager, Assembly-CSharp
-        m_MethodName: QuitGame
+        m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37680,7 +37680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Quit
+  m_Text: Main Menu
 --- !u!222 &1658063724
 CanvasRenderer:
   m_ObjectHideFlags: 0

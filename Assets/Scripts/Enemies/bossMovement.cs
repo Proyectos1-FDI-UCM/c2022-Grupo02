@@ -77,7 +77,15 @@ public class bossMovement : MonoBehaviour
         //Debug.Log(Vector2.Distance(_myTransform.position, _Scottie.transform.position));
         if (Vector2.Distance(_myTransform.position, _Scottie.transform.position) < _range)
         {
-            Vector2 _newPosition = Vector2.MoveTowards(_myTransform.position, _target, speed * Time.deltaTime);
+            if (_myTransform.position.x < positions[0].x || _myTransform.position.x > positions[1].x)
+            {
+                _AuxSpeed = 0;
+            }
+            else
+            {
+                _AuxSpeed = speed;
+            }
+            Vector2 _newPosition = Vector2.MoveTowards(_myTransform.position, _target, _AuxSpeed * Time.deltaTime);
             _myTransform.position = _newPosition;
         }
 

@@ -23,7 +23,6 @@ public class GameManager : MonoBehaviour
     #endregion
 
     #region parameters 
-    float timeToDeadScreen = 100f;
     public int scene;
     [SerializeField]
     public float volume = 0.5f;
