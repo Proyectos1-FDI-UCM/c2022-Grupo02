@@ -23,21 +23,20 @@ public class EnemyLifeComponent : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
         health -= Damage;
-        audioSource.PlayOneShot(clip, volume);
+
         if (health <= 0)
         {
             gameObject.GetComponent<Animator>().SetBool("Hit", false);
             gameObject.GetComponent<Animator>().SetBool("Efecto", true);
+            Die();
         }
+        audioSource.PlayOneShot(clip, volume);
     }
 
     private void Die()
     {
-        
         Destroy(gameObject);
         
-
-
         if (_myHealthDropComponent != null)
         {
             _myHealthDropComponent.TryToDrop(_myTransform.position);
