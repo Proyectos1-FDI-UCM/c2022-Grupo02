@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     }
 
     private UI_Manager _myUIManager;
-    private GameObject _myPlayer;
+    public GameObject _myPlayer;
     private InputManager _myInputManager;
     private Character_MovementController _myCharacterMovementController;
     private CambioNivel _mycambio;    

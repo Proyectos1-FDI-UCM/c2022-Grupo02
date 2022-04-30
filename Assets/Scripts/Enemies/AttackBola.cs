@@ -18,7 +18,6 @@ public class AttackBola : MonoBehaviour
     #region references
     [SerializeField]
     private GameObject myShot;
-    private GameObject _Scottie;
     [SerializeField]
     private Transform shoopos;
     private Transform _myTransform;
@@ -26,13 +25,12 @@ public class AttackBola : MonoBehaviour
 
     void Start()
     {
-        _Scottie = GameObject.Find("Scottie");
         _myTransform = GetComponent<Transform>();
     }
 
     void Update()
     {
-        if (Vector2.Distance(_myTransform.position, _Scottie.transform.position) < _range && _Scottie.transform.position.y > _myTransform.position.y)
+        if (Vector2.Distance(_myTransform.position, GameManager.Instance._myPlayer.transform.position) < _range && GameManager.Instance._myPlayer.transform.position.y > _myTransform.position.y)
         {
             if (Time.time > canfire)
             {

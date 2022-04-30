@@ -18,7 +18,6 @@ public class GroundEnemy_Controller : MonoBehaviour
 
     #region references
     private Transform _myTransform;
-    private GameObject _Scottie;
     #endregion
 
     #region methods
@@ -28,11 +27,11 @@ public class GroundEnemy_Controller : MonoBehaviour
 
         if (player != null)
         {
-            if (gameObject.GetComponent<SpriteRenderer>().flipX && _Scottie.transform.position.x > _myTransform.position.x) {
+            if (gameObject.GetComponent<SpriteRenderer>().flipX && GameManager.Instance._myPlayer.transform.position.x > _myTransform.position.x) {
                 gameObject.GetComponent<SpriteRenderer>().flipX = false;// girar izquierda 
                 index++;
             }
-            else if (!gameObject.GetComponent<SpriteRenderer>().flipX && _Scottie.transform.position.x < _myTransform.position.x) {
+            else if (!gameObject.GetComponent<SpriteRenderer>().flipX && GameManager.Instance._myPlayer.transform.position.x < _myTransform.position.x) {
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;// girar a la derecha
                 index = 0;
             }
@@ -45,7 +44,6 @@ public class GroundEnemy_Controller : MonoBehaviour
 
     void Start()
     {
-        _Scottie = GameObject.Find("Scottie");
         _AuxSpeed = speed;
         _myTransform = GetComponent<Transform>();
     }

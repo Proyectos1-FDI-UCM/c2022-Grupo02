@@ -20,7 +20,6 @@ public class bossMovement : MonoBehaviour
 
     #region references
     private Transform _myTransform;
-    private GameObject _Scottie;
     #endregion
 
     #region methods
@@ -31,12 +30,12 @@ public class bossMovement : MonoBehaviour
         if (player != null)
         {
             gameObject.GetComponent<Animator>().SetBool("Ataque", true);
-            if (gameObject.GetComponent<SpriteRenderer>().flipX && _Scottie.transform.position.x > _myTransform.position.x)
+            if (gameObject.GetComponent<SpriteRenderer>().flipX && GameManager.Instance._myPlayer.transform.position.x > _myTransform.position.x)
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = false;// girar izquierda 
                 index = 1;
             }
-            else if (!gameObject.GetComponent<SpriteRenderer>().flipX && _Scottie.transform.position.x < _myTransform.position.x)
+            else if (!gameObject.GetComponent<SpriteRenderer>().flipX && GameManager.Instance._myPlayer.transform.position.x < _myTransform.position.x)
             {
                 gameObject.GetComponent<SpriteRenderer>().flipX = true;// girar a la derecha
                 index = 0;
@@ -49,7 +48,6 @@ public class bossMovement : MonoBehaviour
 
     void Start()
     {
-        _Scottie = GameObject.Find("Scottie");
         _AuxSpeed = speed;
         _myTransform = GetComponent<Transform>();
     }
@@ -58,7 +56,7 @@ public class bossMovement : MonoBehaviour
     void Update()
     {
 
-        Vector2 _target = new Vector2(_Scottie.transform.position.x, _myTransform.position.y);
+        Vector2 _target = new Vector2(GameManager.Instance._myPlayer.transform.position.x, _myTransform.position.y);
 
         if (transform.position == positions[index])
         {
@@ -75,7 +73,7 @@ public class bossMovement : MonoBehaviour
         }
 
         //Debug.Log(Vector2.Distance(_myTransform.position, _Scottie.transform.position));
-        if (Vector2.Distance(_myTransform.position, _Scottie.transform.position) < _range)
+        if (Vector2.Distance(_myTransform.position, GameManager.Instance._myPlayer.transform.position) < _range)
         {
             if (_myTransform.position.x < positions[0].x || _myTransform.position.x > positions[1].x)
             {
@@ -94,13 +92,13 @@ public class bossMovement : MonoBehaviour
             _myTransform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * _AuxSpeed);
         }
 
-        if (_myTransform.position.x < _Scottie.transform.position.x)
+        if (_myTransform.position.x < GameManager.Instance._myPlayer.transform.position.x)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
             index = 1;
         }
 
-        else if (_myTransform.position.x > _Scottie.transform.position.x && Vector2.Distance(_myTransform.position, _Scottie.transform.position) < _range)
+        else if (_myTransform.position.x > GameManager.Instance._myPlayer.transform.position.x && Vector2.Distance(_myTransform.position, GameManager.Instance._myPlayer.transform.position) < _range)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
             index = 0;

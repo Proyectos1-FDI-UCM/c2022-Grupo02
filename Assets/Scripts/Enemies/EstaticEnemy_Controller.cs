@@ -11,15 +11,14 @@ public class EstaticEnemy_Controller : MonoBehaviour
     #endregion
 
     #region references
-    GameObject _Scottie;
     Transform _myTransform;
     #endregion
 
     #region methods
     public void Choose()
     {
-        if (_Scottie.transform.position.x > _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatLeft", true); }// animación de comer izquierda
-        else if (_Scottie.transform.position.x < _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatRight", true); }// animación de comer derecha
+        if (GameManager.Instance._myPlayer.transform.position.x > _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatLeft", true); }// animación de comer izquierda
+        else if (GameManager.Instance._myPlayer.transform.position.x < _myTransform.position.x) { gameObject.GetComponent<Animator>().SetBool("EatRight", true); }// animación de comer derecha
     }
     #endregion
 
@@ -48,6 +47,5 @@ public class EstaticEnemy_Controller : MonoBehaviour
     void Start()
     {
         _myTransform = GetComponent<Transform>();
-        _Scottie = GameObject.Find("Scottie");
     }
 }

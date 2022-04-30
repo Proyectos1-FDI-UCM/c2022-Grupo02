@@ -23,8 +23,6 @@ public class FlyingEnemy_Controller : MonoBehaviour
 
     [SerializeField]
     private Rigidbody _batRigidBody;
-
-    private GameObject _Scottie;
     #endregion
 
     #region methods
@@ -40,32 +38,27 @@ public class FlyingEnemy_Controller : MonoBehaviour
     }
     #endregion
 
-    void Start()
-    {
-        _Scottie = GameObject.Find("Scottie");
-    }
-
     void Update()
     {
 
-        Vector2 _target = new Vector2(_Scottie.transform.position.x, _Scottie.transform.position.y);
-        if (Vector2.Distance(_batTransform.position, _Scottie.transform.position) < _range && Vector2.Distance(_batTransform.position, _Scottie.transform.position) > _range / 6.0f)
+        Vector2 _target = new Vector2(GameManager.Instance._myPlayer.transform.position.x, GameManager.Instance._myPlayer.transform.position.y);
+        if (Vector2.Distance(_batTransform.position, GameManager.Instance._myPlayer.transform.position) < _range && Vector2.Distance(_batTransform.position, GameManager.Instance._myPlayer.transform.position) > _range / 6.0f)
         {
             Vector2 _newPosition = Vector2.MoveTowards(_batRigidBody.position, _target, _speed * Time.deltaTime);
             _batRigidBody.MovePosition(_newPosition);
         }
-        else if (Vector2.Distance(_batTransform.position, _Scottie.transform.position) < _range)
+        else if (Vector2.Distance(_batTransform.position, GameManager.Instance._myPlayer.transform.position) < _range)
         {
             Vector2 _newPosition = Vector2.MoveTowards(_batRigidBody.position, _target, _speed / 1.5f * Time.deltaTime);
             _batRigidBody.MovePosition(_newPosition);
         }
 
-        if (_batTransform.position.x < _Scottie.transform.position.x)
+        if (_batTransform.position.x < GameManager.Instance._myPlayer.transform.position.x)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
 
-        else if (_batTransform.position.x > _Scottie.transform.position.x)
+        else if (_batTransform.position.x > GameManager.Instance._myPlayer.transform.position.x)
         {
             gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
