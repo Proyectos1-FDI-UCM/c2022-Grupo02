@@ -21,6 +21,7 @@ public class MeleAttack : MonoBehaviour
     {
         EnemyLifeComponent enemy = collision.gameObject.GetComponent<EnemyLifeComponent>();
         BossLife_Controller boss = collision.gameObject.GetComponent<BossLife_Controller>();
+        BloqueDestructible bloque = collision.gameObject.GetComponent<BloqueDestructible>();
 
         if (enemy != null)
         {
@@ -30,6 +31,10 @@ public class MeleAttack : MonoBehaviour
         if(boss != null)
         {
             boss.Damage(_damage);
+        }
+        if (bloque != null)
+        {
+            bloque.Damage(_damage);
         }
     }
 

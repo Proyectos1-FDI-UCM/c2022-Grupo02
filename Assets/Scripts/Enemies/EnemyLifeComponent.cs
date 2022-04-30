@@ -28,7 +28,6 @@ public class EnemyLifeComponent : MonoBehaviour
         {
             gameObject.GetComponent<Animator>().SetBool("Hit", false);
             gameObject.GetComponent<Animator>().SetBool("Efecto", true);
-            Die();
         }
         audioSource.PlayOneShot(clip, volume);
     }
