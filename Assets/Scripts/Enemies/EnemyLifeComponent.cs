@@ -14,7 +14,6 @@ public class EnemyLifeComponent : MonoBehaviour
     #region references
     public AudioSource audioSource;
     public AudioClip clip;
-    public AudioClip clip2;
     private Transform _myTransform;
     private HealthDropComponent _myHealthDropComponent;
     #endregion
@@ -40,7 +39,6 @@ public class EnemyLifeComponent : MonoBehaviour
         {
             _myHealthDropComponent.TryToDrop(_myTransform.position);
         }
-        AudioSource.PlayClipAtPoint(clip2, transform.position, volume);
     }
 
     private void Start()
