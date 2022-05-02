@@ -1,98 +1,59 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Videogame</title>
+    <!-- description-->
+    <meta name="description" content="Tremendo Juegazo k es">
+    <meta name="author" content="pabmar31@ucm.es">
+    <link href="img/logo.png" rel="shortcut icon" type="image/x-icon">
+    <title>Cursed Cave</title>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css">
 
-    <!-- Custom styles for this template -->
-    <link href="./css/videogame.css" rel="stylesheet">
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
-
-    <main role="main">
-      <!-- HEADER SECTION 
-        Change image path in src="..."
-      -->
-      <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-        <img class="img-header img-fluid" src="./img/header.jpg" alt="Header image">
-      </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
 
 
-      <!-- Marketing messaging 
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+</head>
+<body>
+    <img class="header" src="img/header.jpg" alt="Imagen Nombre Juego"><br />
 
-      <div class="container marketing">
+    <div class="container">
+        <div class="trailer">
 
-        <div class="row">
-
-          <!-- Left column -->
-          <div class="col-md-7">
-            
-            <h2>Descripción</h2>
-            <p>Enfrentaos a una nueva aventura en 2D, con un juego de plataformas y acción nunca antes visto.</p>
-            <p>Enfrentaos a multiples enemigos y adentraos en lo mas profundo de la cueva para acabar con la maldición.</p>
-
-
-            <h2>Desarrolladores</h2>
-            <ul>
-                <li>Pablo Martínez Quesada</li>
-                <li>Alberto Peñalba Martos</li>
-                <li>Dorjee Khampa Herrezuelo Blasco</li>
-                <li>Sofía Sanchez Fernández</li>
-                <li>José Eduardo Robles Roca</li>
-            </ul>
-           
-           <!-- Paste URL between "" in href="" -->
-           <a href="" class="btn btn-primary" role="button" aria-pressed="true">Download now</a> 
-
-          </div>
-          
-          <!-- Right column -->
-          <div class="col-md-5">
-
-            <!-- IMAGES AND YOUTUBE VIDEOS
-              Duplicate the following elements to add new images and/or videos
-              Modify href and src attributes with the path/url to the new image/video 
-            -->
-            
-            <!-- Youtube Video -->
-            <div class="media-item">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe src="https://www.youtube.com/embed/YZzydHgojMc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-              </div>
+            <span class="text">
+                <br /><br />
+                Enfrentaos a una nueva aventura en 2D, con un juego de plataformas y acción nunca antes visto.<br />
+                Enfrentaos a multiples enemigos y adentraos en lo mas profundo de la cueva para acabar con la terrible maldición.<br /><br />
+            </span>
+            <video controls>
+                <source src="movie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="download_btn_case">
+                <br /><a href="game/CursedCave.txt" class="download_btn" class="fa fa-download" role="button" aria-pressed="true">Download now</a>
             </div>
-
-            <!-- Images -->
-            <div class="media-item">
-                <a href="img/screenshot.jpg">
-                    <img src="img/screenshot.jpg" alt="Screenshot 1" class="img-thumbnail">
-                    <img src="img/screenshot2.jpg" alt="Screenshot 1" class="img-thumbnail">
-                </a>
-            </div>
-          </div>
+            <span style="font-size: 30px;"><br />Desarrolladores</span>
+            <span class="text">
+                <br /> <br />
+                Pablo Martínez Quesada<br />
+                Alberto Peñalba Martos<br />
+                Dorjee Khampa Herrezuelo Blasco<br />
+                Sofía Sanchez Fernández<br />
+                José Eduardo Robles Roca<br />
+            </span>
         </div>
-      <!-- /END MARKETING -->
-
-      </div><!-- /.container -->
-
-
-      <!-- FOOTER -->
-      <footer class="container">
-        <hr class="footer-divider">
-        <p class="float-right"><a href="#">Back to top</a></p>
-        <p>Proyectos 1. Curso 2021-2022</p>
-        <p>Grado en Desarrollo de Videojuegos &middot; <a target="_blank" href="http://informatica.ucm.es">Facultad de Informática</a> &middot; <a target="_blank" href="http://www.ucm.es">UCM</a></p>
-      </footer>
-    </main>
-  </body>
+    </div>
+    <div class="images">
+        <img src="img/screenshot.jpg">
+        <img src="img/screenshot2.jpg">
+        <img src="img/1.png">
+        <img src="img/2.png">
+    </div>
+</body>
 </html>
