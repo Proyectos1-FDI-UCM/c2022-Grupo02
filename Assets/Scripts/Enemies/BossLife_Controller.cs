@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossLife_Controller : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class BossLife_Controller : MonoBehaviour
 
     #region references
     private Transform _myTransform;
-    public HealthBar HealthBar;
+    public Slider HealthBar;
     public AudioSource audioSource;
     public AudioClip clip;
 
@@ -25,6 +26,7 @@ public class BossLife_Controller : MonoBehaviour
     {
         gameObject.GetComponent<Animator>().SetBool("Hit", true);
         health -= Damage;
+        HealthBar.value = health;
         audioSource.PlayOneShot(clip, volume);
         if (health <= 0)
         {

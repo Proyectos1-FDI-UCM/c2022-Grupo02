@@ -18,7 +18,7 @@ public class CambioNivel : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         Player_Life_Component player = collision.gameObject.GetComponent<Player_Life_Component>();
-        Debug.Log(player);
+        //Debug.Log(player);
         if (player != null)
         {
             scene = SceneManager.GetActiveScene().buildIndex + 1;

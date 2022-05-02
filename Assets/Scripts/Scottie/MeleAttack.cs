@@ -25,7 +25,7 @@ public class MeleAttack : MonoBehaviour
         if (enemy != null)
         {
             enemy.Damage(_damage);
-            Debug.Log(enemy);
+            //Debug.Log(enemy);
         }
         if(boss != null)
         {

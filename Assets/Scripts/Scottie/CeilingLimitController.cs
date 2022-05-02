@@ -15,7 +15,7 @@ public class CeilingLimitController : MonoBehaviour
 
     private void OnTriggerEnter()
     {
-        Debug.Log("He chocado con el techo");
+        //Debug.Log("He chocado con el techo");
         _jumpController.TouchCeiling();
     }
 }
