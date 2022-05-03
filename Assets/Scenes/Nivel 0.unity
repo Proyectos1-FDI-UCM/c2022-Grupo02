@@ -8011,6 +8011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigo Volador
       objectReference: {fileID: 0}
+    - target: {fileID: 248109734932515193, guid: c64b0040c7f72a945a766863c9c5f34a, type: 3}
+      propertyPath: _characterTransform
+      value: 
+      objectReference: {fileID: 1345503355}
     - target: {fileID: 248109734932515195, guid: c64b0040c7f72a945a766863c9c5f34a, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -12496,8 +12500,8 @@ Transform:
   - {fileID: 7725017075397562761}
   - {fileID: 2106645086}
   - {fileID: 43968071}
-  - {fileID: 759948670}
   - {fileID: 232523486}
+  - {fileID: 759948670}
   - {fileID: 1066267694}
   m_Father: {fileID: 0}
   m_RootOrder: 8
