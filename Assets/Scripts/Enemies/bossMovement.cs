@@ -75,7 +75,7 @@ public class bossMovement : MonoBehaviour
         //Debug.Log(Vector2.Distance(_myTransform.position, _Scottie.transform.position));
         if (Vector2.Distance(_myTransform.position, GameManager.Instance._myPlayer.transform.position) < _range)
         {
-            if (_myTransform.position.x < positions[0].x || _myTransform.position.x > positions[1].x)
+            if (_myTransform.position.x < (positions[0].x + 0.1f) || _myTransform.position.x > (positions[1].x - 0.2f))
             {
                 _AuxSpeed = 0;
             }
@@ -89,7 +89,7 @@ public class bossMovement : MonoBehaviour
 
         else
         {
-            _myTransform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * _AuxSpeed);
+            _myTransform.position = Vector2.MoveTowards(transform.position, positions[index], Time.deltaTime * speed);
         }
 
         if (_myTransform.position.x < GameManager.Instance._myPlayer.transform.position.x)

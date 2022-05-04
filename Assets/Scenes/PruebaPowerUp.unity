@@ -22125,7 +22125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2157835554470960510, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: positions.Array.data[0].x
-      value: -27.73
+      value: -31.08
       objectReference: {fileID: 0}
     - target: {fileID: 2157835554470960510, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: positions.Array.data[0].y
@@ -22133,7 +22133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2157835554470960510, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: positions.Array.data[1].x
-      value: 24.56
+      value: 28.18
       objectReference: {fileID: 0}
     - target: {fileID: 2157835554470960510, guid: 97b690a4b907343439efc0dcae5b84bc, type: 3}
       propertyPath: positions.Array.data[1].y
@@ -33129,7 +33129,7 @@ MonoBehaviour:
   health: 20
   maxHealth: 20
   volume: 0.5
-  HealthBar: {fileID: 1256046139}
+  HealthBar: {fileID: 0}
   audioSource: {fileID: 1530381939}
   clip: {fileID: 8300000, guid: 14ee7607fe5525242a85fc0fd4ce79c7, type: 3}
 --- !u!114 &1530381931
@@ -40437,6 +40437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bba1dd8c591c5b43ab6207e5fcb99ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _myPlayer: {fileID: 0}
   scene: 1
   volume: 0.5
 --- !u!4 &1898295610
